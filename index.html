@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="description" content="Crisis Communication — learn through the case studies. SCCT, Image Repair, EPPM, framing, the crisis plan.">
-<title>Crisis Communication — Learn Through the Cases</title>
+<meta name="description" content="Crisis Communication exam guide — Theory, Case Study and Exam Questions for every framework.">
+<title>Crisis Communication — Theory · Case · Exam Questions</title>
 <style>
   :root{
     --bg:#f6f7f9; --card:#ffffff; --ink:#15202b; --muted:#48566a;
     --line:#dfe3ea; --brand:#1f6feb; --brand-ink:#0b4bb3;
     --key:#0a7d4d; --key-bg:#e7f6ee; --tip:#b5560b; --tip-bg:#fdf0e2;
     --ex:#6b3fa0; --ex-bg:#f1ebfa; --warn:#b3261e; --warn-bg:#fbe9e7; --hook:#0c6b80; --hook-bg:#e4f4f8;
-    --maxw:760px; --radius:14px;
+    --maxw:780px; --radius:14px;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
   }
   @media (prefers-color-scheme: dark){
@@ -43,36 +43,36 @@
 
   header.hero{padding:clamp(2rem,7vw,3.4rem) 0 1rem}
   .kick{font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;color:var(--brand)}
-  h1{font-size:clamp(1.9rem,6vw,2.7rem);line-height:1.1;letter-spacing:-.02em;margin:.5rem 0 .4rem}
-  .lede{font-size:1.14rem;color:var(--muted);margin:.2rem 0 0}
+  h1{font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.1;letter-spacing:-.02em;margin:.5rem 0 .4rem}
+  .lede{font-size:1.13rem;color:var(--muted);margin:.2rem 0 0}
 
   nav.toc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:.5rem;margin:1.4rem 0}
   nav.toc h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:.6rem .8rem .3rem}
   nav.toc ol{list-style:none;margin:0;padding:0}
-  nav.toc li{margin:0}
   nav.toc a{display:flex;gap:.55rem;flex-wrap:wrap;text-decoration:none;color:var(--ink);padding:.62rem .8rem;border-radius:9px;font-weight:600;font-size:.99rem}
   nav.toc a:hover,nav.toc a:focus-visible{background:color-mix(in srgb,var(--brand) 12%,transparent)}
   nav.toc a .tag{color:var(--muted);font-weight:600;font-size:.84rem}
-  nav.toc a b{color:var(--brand)}
+  nav.toc a b{color:var(--brand);min-width:1.1em}
 
   main{padding-bottom:4rem}
   section{margin-top:2.6rem;scroll-margin-top:64px}
-  h2.sec{font-size:clamp(1.4rem,5vw,1.85rem);letter-spacing:-.01em;line-height:1.15;margin:.2rem 0;padding-top:.8rem;border-top:2px solid var(--line)}
-  h3{font-size:1.16rem;margin:1.6rem 0 .3rem;letter-spacing:-.01em;display:flex;gap:.5rem;align-items:baseline}
-  h3 .e{flex:0 0 auto}
-  h4{font-size:1.03rem;margin:1.1rem 0 .2rem}
+  .chap-head{background:linear-gradient(135deg,color-mix(in srgb,var(--brand) 16%,var(--card)),var(--card));border:1px solid var(--line);border-radius:18px;padding:1.1rem 1.2rem;margin:0 0 .4rem}
+  .chap-num{font-weight:800;color:var(--brand);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
+  .chap-head h2{font-size:clamp(1.5rem,5.5vw,2rem);margin:.25rem 0 .55rem;line-height:1.12}
+  .lens{display:inline-flex;align-items:center;gap:.4rem;font-size:.84rem;font-weight:700;background:color-mix(in srgb,var(--brand) 18%,transparent);color:var(--brand-ink);border-radius:999px;padding:.32rem .75rem}
+  .facts{color:var(--muted);font-size:.92rem;margin:.6rem 0 0}
+
+  h3.block{font-size:1.28rem;margin:1.9rem 0 .4rem;padding:.55rem .8rem;border-radius:10px;display:flex;gap:.55rem;align-items:center;letter-spacing:-.01em}
+  h3.t{background:color-mix(in srgb,var(--brand) 12%,transparent)}
+  h3.c{background:color-mix(in srgb,var(--ex) 14%,transparent)}
+  h3.q{background:color-mix(in srgb,var(--key) 14%,transparent)}
+  h4{font-size:1.05rem;margin:1.2rem 0 .2rem}
   p{margin:.65rem 0}
-  ul,ol{padding-left:1.25rem;margin:.5rem 0}
-  li{margin:.35rem 0}
+  ul,ol{padding-left:1.3rem;margin:.5rem 0}
+  li{margin:.4rem 0}
   mark{background:color-mix(in srgb,var(--brand) 22%,transparent);color:inherit;padding:0 .15em;border-radius:3px}
   blockquote{margin:.8rem 0;padding:.5rem 0 .5rem 1rem;border-left:4px solid color-mix(in srgb,var(--brand) 50%,var(--line));color:var(--ink);font-style:italic}
   blockquote cite{display:block;font-style:normal;color:var(--muted);font-size:.9rem;margin-top:.3rem}
-
-  .case-head{background:linear-gradient(135deg,color-mix(in srgb,var(--brand) 16%,var(--card)),var(--card));border:1px solid var(--line);border-radius:18px;padding:1.1rem 1.2rem;margin:0 0 .5rem}
-  .case-num{font-weight:800;color:var(--brand);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
-  .case-head h2{font-size:clamp(1.5rem,5.5vw,2rem);margin:.25rem 0 .55rem;border:0;padding:0;line-height:1.12}
-  .lens{display:inline-flex;align-items:center;gap:.4rem;font-size:.84rem;font-weight:700;background:color-mix(in srgb,var(--brand) 18%,transparent);color:var(--brand-ink);border-radius:999px;padding:.32rem .75rem}
-  .facts{color:var(--muted);font-size:.92rem;margin:.6rem 0 0}
 
   .call{border:1px solid var(--line);border-left-width:5px;border-radius:12px;padding:.85rem 1rem;margin:1rem 0;background:var(--card)}
   .call .lab{display:inline-flex;align-items:center;gap:.4rem;font-weight:800;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
@@ -85,19 +85,21 @@
 
   .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.1rem;margin:1rem 0}
   .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:1rem 0}
-  table{border-collapse:collapse;width:100%;min-width:460px;font-size:.97rem}
+  table{border-collapse:collapse;width:100%;min-width:480px;font-size:.97rem}
   th,td{text-align:left;padding:.6rem .75rem;border-bottom:1px solid var(--line);vertical-align:top}
   thead th{background:color-mix(in srgb,var(--brand) 10%,transparent)}
   tbody tr:last-child td{border-bottom:0}
 
   details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:.6rem 0;overflow:hidden}
-  details[open]{border-color:color-mix(in srgb,var(--brand) 45%,var(--line))}
+  details[open]{border-color:color-mix(in srgb,var(--key) 55%,var(--line))}
   summary{cursor:pointer;padding:.85rem 1rem;font-weight:600;list-style:none;display:flex;gap:.6rem;align-items:flex-start;min-height:44px}
   summary::-webkit-details-marker{display:none}
-  summary::before{content:"\25BA";color:var(--brand);font-size:.8em;margin-top:.25em;transition:transform .2s}
+  summary::before{content:"\25BA";color:var(--key);font-size:.8em;margin-top:.3em;transition:transform .2s}
   details[open] summary::before{transform:rotate(90deg)}
-  summary:hover{background:color-mix(in srgb,var(--brand) 8%,transparent)}
+  summary:hover{background:color-mix(in srgb,var(--key) 8%,transparent)}
+  summary .qn{color:var(--key);font-weight:800;margin-right:.1rem}
   .reveal{padding:0 1rem 1rem 2.1rem} .reveal p:first-child{margin-top:0}
+  .reveal .modlab{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 
   #top{position:fixed;right:14px;bottom:14px;z-index:35;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:50%;width:46px;height:46px;font-size:1.2rem;cursor:pointer;display:none}
   #top.show{display:block}
@@ -109,7 +111,7 @@
 <div id="bar" aria-hidden="true"></div>
 
 <div class="topbar"><div class="wrap">
-  <span class="brandname">🧯 Crisis Comm · by case</span>
+  <span class="brandname">🧯 Crisis Comm</span>
   <span class="spacer"></span>
   <button class="btn" id="themeBtn" aria-pressed="false">🌙 <span id="themeTxt">Dark</span></button>
 </div></div>
@@ -117,395 +119,391 @@
 <div class="wrap">
 <header class="hero">
   <div class="kick">Babeș-Bolyai · Crisis Communication</div>
-  <h1>Learn it through the cases 📖</h1>
-  <p class="lede">Forget memorising lists. Each crisis below is a <em>story</em> — and inside every story, one theory comes to life. Understand why the people involved spoke the way they did, and the theory sticks on its own.</p>
+  <h1>Theory · Case · Exam questions 📚</h1>
+  <p class="lede">Each chapter has the same three blocks: <strong>📘 the theory</strong> explained in full, <strong>📂 the case study</strong> that proves it, and <strong>❓ open exam questions</strong> with model answers. Read the theory, watch it happen in the case, then test yourself.</p>
 
   <nav class="toc" aria-label="Contents">
-    <h2>The six cases (and what each teaches)</h2>
+    <h2>Chapters</h2>
     <ol>
-      <li><a href="#how"><b>★</b> How to read this guide</a></li>
-      <li><a href="#bp"><b>1</b> BP oil spill <span class="tag">→ SCCT / Coombs</span></a></li>
-      <li><a href="#carrefour"><b>2</b> Carrefour in China <span class="tag">→ Image Repair / Benoit</span></a></li>
-      <li><a href="#colectiv"><b>3</b> Colectiv fire <span class="tag">→ public sector + framing</span></a></li>
-      <li><a href="#terror"><b>4</b> Terror attacks <span class="tag">→ the first message</span></a></li>
-      <li><a href="#covid"><b>5</b> COVID-19 <span class="tag">→ risk &amp; fear / EPPM</span></a></li>
-      <li><a href="#qatargate"><b>6</b> Qatargate <span class="tag">→ tailored image repair</span></a></li>
-      <li><a href="#plan"><b>＋</b> The crisis plan (the prep)</a></li>
-      <li><a href="#toolkit"><b>＋</b> Toolkit recap (all theories)</a></li>
-      <li><a href="#exam"><b>＋</b> Now you do it (exam template)</a></li>
+      <li><a href="#c1"><b>1</b> Foundations <span class="tag">what a crisis is</span></a></li>
+      <li><a href="#c2"><b>2</b> SCCT <span class="tag">Coombs · case: BP</span></a></li>
+      <li><a href="#c3"><b>3</b> Apologia &amp; Image Repair <span class="tag">Benoit · case: Carrefour</span></a></li>
+      <li><a href="#c4"><b>4</b> The Crisis Plan <span class="tag">prevention</span></a></li>
+      <li><a href="#c5"><b>5</b> First messages <span class="tag">case: terror attacks</span></a></li>
+      <li><a href="#c6"><b>6</b> Risk &amp; EPPM <span class="tag">Witte · case: COVID-19</span></a></li>
+      <li><a href="#c7"><b>7</b> Health &amp; framing <span class="tag">case: Colectiv</span></a></li>
+      <li><a href="#c8"><b>8</b> Political crisis <span class="tag">case: Qatargate</span></a></li>
+      <li><a href="#exam"><b>＋</b> How to write a case answer</a></li>
     </ol>
   </nav>
 </header>
 
 <main id="main">
 
-<!-- HOW -->
-<section id="how">
-  <h2 class="sec">★ How to read this guide</h2>
-  <p>Your exam asks you to <strong>take a real crisis and analyse the communication</strong>. So this guide is built the way you'll be tested: one case at a time. For each one you'll get the same logical chain —</p>
-  <ol>
-    <li>📰 <strong>What happened</strong> — the story, plainly told.</li>
-    <li>🧭 <strong>Read the crisis</strong> — <em>why</em> it's this type of crisis (the classification logic).</li>
-    <li>🗣️ <strong>What they said &amp; did</strong> — the real statements, and the move behind each.</li>
-    <li>🧪 <strong>The theory it teaches</strong> — the framework, introduced exactly where it makes sense.</li>
-    <li>⚖️ <strong>Did it work?</strong> — the verdict.</li>
-    <li>💡 <strong>Why it matters</strong> — the one transferable lesson.</li>
-    <li>🎯 <strong>In the exam</strong> — how to write this case up for marks.</li>
-  </ol>
-  <div class="call key"><span class="lab"><span aria-hidden="true">🧠</span> The mindset</span>
-    <p>Don't study the theory and hunt for examples. Do the reverse: <strong>understand the story, and the theory falls out of it.</strong> Each case "owns" one main framework; later cases reuse the earlier ones, so by the end you'll have seen everything two or three times in action.</p>
+<!-- ============ CH 1 FOUNDATIONS ============ -->
+<section id="c1">
+  <div class="chap-head">
+    <div class="chap-num">Chapter 1</div>
+    <h2>Foundations — what a crisis is</h2>
+    <span class="lens">📘 Definitions · dimensions · credibility</span>
   </div>
+
+  <h3 class="block t"><span aria-hidden="true">📘</span> The theory</h3>
+  <p>Before any strategy, you need the vocabulary. A <strong>crisis</strong> has been defined several ways in the course — learn one fully and be able to <strong>name the author</strong>:</p>
+  <ul>
+    <li><strong>Coombs (2007):</strong> the <em>perception</em> of an unpredictable event that threatens stakeholders' important <strong>expectancies</strong> and can seriously impact an organisation's performance. The key word is <strong>perception</strong> — a crisis is partly in the audience's mind, which is exactly why <em>communication</em> can make or break it.</li>
+    <li><strong>Fearn-Banks (1996):</strong> a major occurrence with a potentially <strong>negative outcome</strong> affecting an organisation and its publics; it <strong>interrupts normal business</strong> and can <strong>threaten the organisation's very existence</strong>.</li>
+    <li><strong>Seeger, Sellnow &amp; Ulmer (1998):</strong> a specific, <strong>unexpected and non-routine</strong> event creating <strong>high uncertainty</strong> and threat to an organisation's high-priority goals.</li>
+  </ul>
+  <h4>The components every crisis shares</h4>
+  <p>It is <strong>unexpected</strong>, poses a <strong>threat or challenge</strong>, is potentially <strong>hazardous</strong>, demands <strong>immediate, rapid action</strong>, occurs where management has <strong>limited control</strong>, has <strong>unpredictable consequences</strong>, and inevitably <strong>arouses media and public interest</strong>.</p>
+  <h4>Crisis communication and its three dimensions</h4>
+  <p><strong>Crisis communication</strong> is the exchange of information among authorities, organisations, media and individuals <strong>before, during and after</strong> a crisis. During a crisis there are <strong>three dimensions</strong> to manage: (1) the <strong>actual crisis</strong> itself, (2) the way authorities/organisations <strong>handle</strong> it, and (3) the resulting <strong>crisis image</strong>. The lesson hidden here is profound: you can manage the event competently and still <em>lose on image</em> — which is why image (dimension 3) is its own battlefield.</p>
+  <div class="call key"><span class="lab"><span aria-hidden="true">📌</span> The 4 dimensions of credibility</span>
+    <p>The public rates an authority's credibility on four things: its <strong>openness/honesty</strong>, its <strong>competence</strong>, the <strong>fairness</strong> of its actions, and the <strong>empathy</strong> it displays. Treat these four as your <em>scorecard</em> — in any case analysis, ask how the response performed on each.</p>
+  </div>
+  <p>Finally, the crisis team's opening questions frame everything that follows: <em>What is the nature of the crisis? Who is affected? What is the worst-case scenario? What is at stake? Who else is involved? What will the media and public think and demand? What are the time constraints? What happens after the acute stage?</em></p>
+
+  <h3 class="block c"><span aria-hidden="true">📂</span> Case in miniature</h3>
+  <p>Take a <strong>company data breach</strong>. The <em>actual crisis</em> is the leak; the <em>handling</em> is the investigation and the fix; the <em>image</em> is whether customers still trust you. A firm can patch the breach perfectly (dimension 2) yet be destroyed on dimension 3 if it stays silent or sounds careless — proving the breach is a <em>perception</em> problem as much as a technical one. Every detailed case in this guide is really a study of those three dimensions in tension.</p>
+
+  <h3 class="block q"><span aria-hidden="true">❓</span> Potential exam questions</h3>
+  <details><summary><span class="qn">Q.</span> Define a crisis and explain why "perception" is central to crisis communication.</summary><div class="reveal"><p class="modlab">Model answer</p><p>Cite <strong>Coombs (2007)</strong>: a crisis is the <em>perception</em> of an unpredictable event threatening stakeholders' important expectancies. The word "perception" matters because a crisis is not only what objectively happens but what publics <em>believe</em> is happening; reputation is built on perception, so an organisation can be damaged by how a situation is read even when its actions are technically sound. This is precisely why the <em>three dimensions</em> distinguish the event, its handling and its image — and why communication, which shapes perception, is decisive. (You can support with Fearn-Banks' definition: a negative occurrence that can threaten the organisation's existence.)</p></div></details>
+  <details><summary><span class="qn">Q.</span> What are the three dimensions of a crisis, and how can an organisation "win" one but "lose" another?</summary><div class="reveal"><p class="modlab">Model answer</p><p>The three dimensions are the <strong>actual crisis</strong>, the <strong>handling</strong> of it, and the <strong>crisis image</strong>. An organisation can manage the event well operationally (handling) yet lose on image if it communicates poorly — silence, arrogance, or inconsistency turns competent handling into a perceived failure. Example: BP eventually cleaned up and paid out (handling), but its blame-shifting and a tone-deaf CEO destroyed its image, costing ~25% of its market value. The lesson: managing the crisis and managing the image are separate jobs.</p></div></details>
+  <details><summary><span class="qn">Q.</span> Explain the four dimensions on which the public judges an authority's credibility.</summary><div class="reveal"><p class="modlab">Model answer</p><p><strong>Openness/honesty</strong> — is the authority transparent and truthful, or hiding/spinning? <strong>Competence</strong> — does it seem capable of managing the situation? <strong>Fairness</strong> — are its actions just and proportionate to all affected? <strong>Empathy</strong> — does it show genuine concern for victims and the public? These four explain many failures: BP scored badly on openness (censoring information), competence (underestimating the leak) and empathy ("I'd like my life back"); the Queen's COVID address scored highly on empathy and competence (calm, reassuring), which is why it is held up as a model.</p></div></details>
+</section>
+
+<!-- ============ CH 2 SCCT ============ -->
+<section id="c2">
+  <div class="chap-head">
+    <div class="chap-num">Chapter 2</div>
+    <h2>SCCT — Situational Crisis Communication Theory</h2>
+    <span class="lens">📘 W. Timothy Coombs (2007) · 📂 case: BP oil spill</span>
+  </div>
+
+  <h3 class="block t"><span aria-hidden="true">📘</span> The theory</h3>
+  <p><strong>SCCT</strong> is the field's central reputation-management theory. Its one big idea: <mark>match your crisis response to how much responsibility the public attributes to you</mark>, and to the reputational threat you face. It is built on <strong>Attribution Theory</strong> — when something bad happens, people automatically search for a cause to <em>blame</em>; SCCT tells you to read that blame and respond proportionately.</p>
+
+  <h4>Step 1 — Assess the reputational threat (4 factors)</h4>
+  <ol>
+    <li><strong>Crisis type</strong> — sets the baseline responsibility (below).</li>
+    <li><strong>Severity</strong> — how much damage/harm was done.</li>
+    <li><strong>History</strong> — has the organisation had similar crises before?</li>
+    <li><strong>Prior reputation / relationship</strong> — was the existing relationship with stakeholders good or bad?</li>
+  </ol>
+  <p>The last two double as the <strong>two intensifying factors</strong>: a <strong>history of crises</strong> and a <strong>prior negative reputation</strong> both <em>raise</em> attributed responsibility. The same event lands harder on an organisation with baggage.</p>
+
+  <h4>Step 2 — The three crisis types (rising blame)</h4>
   <div class="tablewrap"><table>
-    <thead><tr><th>Case</th><th>It mainly teaches</th></tr></thead>
+    <thead><tr><th>Cluster</th><th>Responsibility</th><th>Examples</th></tr></thead>
     <tbody>
-      <tr><td><strong>BP oil spill</strong></td><td>SCCT (Coombs) — match your response to how much you're blamed</td></tr>
-      <tr><td><strong>Carrefour in China</strong></td><td>Apologia &amp; Image Repair (Benoit) — repairing a damaged image</td></tr>
-      <tr><td><strong>Colectiv fire</strong></td><td>Public-sector crisis · consistency · framing (Iyengar)</td></tr>
-      <tr><td><strong>Terror attacks</strong></td><td>The first message to a frightened public</td></tr>
-      <tr><td><strong>COVID-19</strong></td><td>Risk perception &amp; fear · EPPM (Witte) · all theories combined</td></tr>
-      <tr><td><strong>Qatargate</strong></td><td>Image repair tailored to different audiences</td></tr>
+      <tr><td><strong>Victim</strong></td><td>Minimal</td><td>natural disaster, rumour, product tampering, workplace violence, malevolence</td></tr>
+      <tr><td><strong>Accidental</strong></td><td>Low</td><td>technical-error accidents, challenges</td></tr>
+      <tr><td><strong>Preventable</strong></td><td>Strong</td><td>human-error accidents, organisational misdeeds, management misconduct</td></tr>
     </tbody>
   </table></div>
-</section>
 
-<!-- CASE 1 BP -->
-<section id="bp">
-  <div class="case-head">
-    <div class="case-num">Case 1</div>
-    <h2>BP &amp; the Deepwater Horizon oil spill</h2>
-    <span class="lens">🧪 Teaches: SCCT — W. Timothy Coombs</span>
-    <p class="facts">Gulf of Mexico · 20 April 2010 · 11 dead · 4.9 million barrels spilled · the largest spill in US history.</p>
-  </div>
-
-  <h3><span class="e">📰</span> What happened</h3>
-  <p>The Deepwater Horizon drilling rig — owned by <strong>Transocean</strong>, leased by <strong>BP</strong> — exploded and sank. Eleven workers died. For weeks oil gushed into the Gulf; by June 2010, <strong>1,100 miles of shoreline</strong> in Louisiana, Mississippi and Florida were polluted. Under pressure from President Obama, BP set up a <strong>$20 billion compensation fund</strong>. By mid-2011 BP had lost roughly <strong>a quarter of its market value</strong>; the final bill (2016) reached about <strong>$61.6 billion</strong>. So BP faced two crises at once: an environmental catastrophe, and a <em>communication</em> catastrophe — and it's the second one the course cares about.</p>
-
-  <h3><span class="e">🧭</span> Read the crisis — why BP <em>owns</em> this</h3>
-  <p>Before you judge the response, judge the <strong>situation</strong>, because the right response depends entirely on it. Coombs gives four questions:</p>
+  <h4>Step 3 — The response strategies</h4>
+  <p>Coombs groups responses into three rising postures, plus a secondary support set:</p>
   <ul>
-    <li><strong>Type?</strong> A <strong>preventable</strong> crisis — it grew from operational and human-judgment failures BP could have controlled, so the public attributes <strong>high responsibility</strong>. (Contrast: a hurricane wrecking the rig would be a <em>victim</em> crisis with almost no blame.)</li>
-    <li><strong>Severity?</strong> Extreme — deaths, ecological ruin, fishermen's livelihoods destroyed.</li>
-    <li><strong>History?</strong> BP had prior safety incidents — an <strong>intensifying factor</strong>.</li>
-    <li><strong>Reputation?</strong> Already weak on safety and environment — a second intensifier.</li>
+    <li><strong>DENY</strong> — <em>attack the accuser</em> (confront whoever claims a crisis exists), <em>denial</em> (assert there is no crisis), <em>scapegoat</em> (blame someone outside the organisation).</li>
+    <li><strong>DIMINISH</strong> — <em>excuse</em> (deny intent to do harm / minimise responsibility), <em>justification</em> (minimise the perceived damage).</li>
+    <li><strong>REBUILD</strong> — <em>compensation</em> (money or gifts to victims), <em>apology</em> (take full responsibility and ask forgiveness).</li>
+    <li><strong>BOLSTERING</strong> (secondary, supports the others) — <em>reminder</em> (recall past good works), <em>ingratiation</em> (praise stakeholders), <em>victimage</em> (note the organisation is a victim too).</li>
   </ul>
-  <div class="call key"><span class="lab"><span aria-hidden="true">🧭</span> The logic</span>
-    <p>High blame + bad history + bad reputation = the public demands <strong>accountability</strong>, not excuses. This is exactly the situation where the theory says you must use your most <strong>accommodative</strong> response (accept responsibility, fix it, compensate). Hold that thought — then watch BP do the opposite.</p>
+  <p>Underpinning all of this is <strong>"informing and adjusting information"</strong>: in every crisis you first give people the facts and tell them how to cope. For low-responsibility victim crises with no history, that base level plus deny/diminish can be enough.</p>
+
+  <div class="call key"><span class="lab"><span aria-hidden="true">📌</span> The matching rule (the exam's favourite)</span>
+    <p>Low blame (victim) → informing/adjusting + deny or diminish. Low-but-real blame (accident) → diminish, sometimes rebuild. High blame (preventable), <em>or</em> any case with intensifying factors → <strong>rebuild</strong> (compensation, apology, corrective action). And whatever you choose, <mark>maintain consistency</mark> — Coombs' rule that a shifting story reads as deception or loss of control.</p>
   </div>
 
-  <h3><span class="e">🗣️</span> What they said &amp; did — and the move behind each</h3>
-  <p>Facing a high-blame crisis, BP and CEO <strong>Tony Hayward</strong> reached for the <em>low-blame</em> playbook. Each quote below is a strategy:</p>
-  <blockquote>"Well, it wasn't our accident… It was their rig, their equipment, their people."<cite>Hayward, blaming Transocean → <strong>shifting the blame / scapegoating</strong></cite></blockquote>
-  <blockquote>"The Gulf of Mexico is a very big ocean. The amount of oil… is tiny in relation to the total water volume." · "The environmental impact… is likely to be very, very modest."<cite>→ <strong>minimisation</strong> (the damage is small)</cite></blockquote>
-  <blockquote>"A complex accident, caused by an unprecedented combination of failures… it is too early — and not up to us — to say who is at fault."<cite>→ a <strong>disclaimer</strong> that diffuses responsibility across "multiple parties"</cite></blockquote>
-  <blockquote>"There's no one who wants this over more than I do. I'd like my life back."<cite>Hayward → makes himself the victim. Tone-deaf and self-centred.</cite></blockquote>
-  <p>And out of public view it was worse: BP tried to <strong>limit and delay the flow of information</strong> to the media, offered potential plaintiffs <strong>$5,000 to drop lawsuits</strong>, had <strong>no crisis plan</strong>, and even broke <strong>its own spill plan</strong> (which forbade promising the ecology would be "restored to normal"). Only later did it pivot to the right register: the $20bn fund, state-by-state cleanup websites, a research initiative, and TV ads where Hayward says <em>"We will make this right."</em></p>
-
-  <h3><span class="e">🧪</span> The theory it teaches — SCCT (Coombs, 2007)</h3>
-  <p>BP is the textbook case for <strong>Situational Crisis Communication Theory</strong>. Its whole logic rests on <strong>Attribution Theory</strong>: when something bad happens, people instinctively look for someone to <em>blame</em>. SCCT says your job is to read how much blame you'll get and <mark>match your response to it</mark>.</p>
-  <div class="card">
-    <h4>The 3 crisis types (rising blame)</h4>
-    <p><strong>Victim</strong> (you were hit too — disaster, rumour, tampering) → <strong>Accidental</strong> (a technical error) → <strong>Preventable</strong> (you should have stopped it — misdeed, negligence). Two <strong>intensifying factors</strong> push any crisis up the scale: a <strong>history</strong> of similar crises and a <strong>prior bad reputation</strong>.</p>
-    <h4>The 3 response postures (rising accommodation)</h4>
-    <p><strong>Deny</strong> (attack the accuser · denial · scapegoat) → <strong>Diminish</strong> (excuse: we didn't mean it · justification: the harm is small) → <strong>Rebuild</strong> (compensation · apology). Plus <strong>bolstering</strong> as backup (remind people of past good works · praise stakeholders · note you're a victim too).</p>
-    <h4>The rule</h4>
-    <p>Low blame → you can deny/diminish. High blame → you <strong>must rebuild</strong>. And whatever you choose, <strong>stay consistent</strong> — a story that shifts reads as a lie.</p>
+  <h3 class="block c"><span aria-hidden="true">📂</span> Case study: BP &amp; the Deepwater Horizon oil spill (2010)</h3>
+  <p><strong>What happened.</strong> On 20 April 2010 the Deepwater Horizon rig — owned by <strong>Transocean</strong>, leased by <strong>BP</strong> — exploded in the Gulf of Mexico. Eleven workers died; about <strong>4.9 million barrels</strong> of oil spilled, the largest in US history. By June, 1,100 miles of coastline were polluted. BP set up a <strong>$20bn</strong> compensation fund under presidential pressure, lost roughly <strong>25% of its market value</strong> by mid-2011, and faced a final bill near <strong>$61.6bn</strong> (2016).</p>
+  <p><strong>Read the crisis.</strong> Type = <strong>preventable</strong> (operational/judgment failures BP could control → high attributed blame); severity = extreme; history = prior safety incidents (intensifier); reputation = already weak on safety/environment (intensifier). Verdict of the situation: this is a maximum-blame case that <em>requires</em> the rebuild posture.</p>
+  <p><strong>What BP did (the mismatch).</strong> Instead, BP and CEO <strong>Tony Hayward</strong> used the low-blame playbook:</p>
+  <blockquote>"It wasn't our accident… It was their rig, their equipment, their people."<cite>→ shifting blame / scapegoat (DENY)</cite></blockquote>
+  <blockquote>"The Gulf of Mexico is a very big ocean… the amount of oil is tiny" · "the environmental impact… is likely to be very, very modest."<cite>→ minimisation (DIMINISH)</cite></blockquote>
+  <blockquote>"There's no one who wants this over more than I do. I'd like my life back."<cite>→ the spokesperson makes himself the victim — tone-deaf</cite></blockquote>
+  <p>And a "disclaimer" diffused blame ("a complex accident… multiple parties… not up to us to say who is at fault"). Off-stage it was worse: BP tried to <strong>limit media access</strong>, offered plaintiffs <strong>$5,000 to drop suits</strong>, had <strong>no crisis plan</strong>, and violated <strong>its own spill plan</strong> (which forbade promising restoration). It eventually pivoted to rebuild — the $20bn fund, cleanup websites, a research initiative, "We will make this right" ads.</p>
+  <p><strong>Verdict.</strong> A high-blame crisis answered with deny/diminish is a textbook <strong>mismatch</strong>; combined with a shifting story and a self-pitying CEO, it converted public anger into a 640,000-strong "Boycott BP" group and a satirical <strong>@BPGlobalPR</strong> account with ten times the followers of BP's real account. BP lost ~25% of its value.</p>
+  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> Relevancy + the mirror image</span>
+    <p>BP proves SCCT in the negative: <strong>when you own the crisis, denial adds the charges of arrogance and dishonesty</strong>. The right response was rebuild + one empathetic, consistent spokesperson. Contrast it with BP's <strong>2025 shareholder revolt</strong> — an <em>accidental/management</em> crisis (a strategy U-turn, no misconduct), where the correct match was <strong>diminish + corrective action with no apology</strong> ("we went too far, too fast"; leadership transition). Same company, different type, opposite correct response — that <em>is</em> the theory.</p>
   </div>
-  <p>Now BP's failure has a name: a <strong>preventable, high-blame crisis answered with deny + diminish</strong> — a textbook <em>mismatch</em> — delivered through a shifting story and a self-pitying spokesperson.</p>
 
-  <h3><span class="e">⚖️</span> Did it work?</h3>
-  <p>No. The mismatch turned public anger into action: a <strong>"Boycott BP"</strong> Facebook group hit 640,000 members; a fake <strong>@BPGlobalPR</strong> account mocking BP gathered <em>more</em> followers (190,000) than BP's real account (18,000). BP lost ~25% of its value. The lesson landed in the negative: deny when you're guilty, and the audience writes your story for you.</p>
-
-  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> Why it matters (the transferable lesson)</span>
-    <p>When <strong>you own the crisis</strong>, denying or minimising doesn't reduce blame — it <em>adds</em> the charge of arrogance and dishonesty on top. The only response that works is to <strong>accept responsibility, fix the harm, compensate, and speak with one empathetic voice</strong>.<br><br><strong>The mirror image (same lecture):</strong> in BP's <strong>2025 shareholder revolt</strong>, the crisis was an <em>accidental/management</em> one (a strategy U-turn, no misconduct), so the <em>right</em> match was <strong>diminish + corrective action, no apology</strong> ("we went too far, too fast"; a leadership transition). Same company, different crisis type, opposite correct response — that contrast <em>is</em> SCCT.</p>
-  </div>
-  <div class="call tip"><span class="lab"><span aria-hidden="true">🎯</span> In the exam</span>
-    <p>Classify it out loud (preventable · high severity · history · weak reputation → high blame). Name the wrong posture (deny/diminish) and call it a <strong>mismatch</strong>. Quote Hayward. Point to the broken consistency and the missing plan. Prescribe the fix (rebuild + one empathetic spokesperson). For a top mark, contrast with the 2025 revolt to prove you understand <em>matching</em>, not just labels.</p>
-  </div>
+  <h3 class="block q"><span aria-hidden="true">❓</span> Potential exam questions</h3>
+  <details><summary><span class="qn">Q.</span> Explain SCCT and how a crisis manager selects an appropriate response strategy.</summary><div class="reveal"><p class="modlab">Model answer</p><p>SCCT (Coombs, 2007), grounded in Attribution Theory, holds that managers should <strong>match</strong> their response to the responsibility stakeholders attribute. The process: (1) assess the reputational threat through four factors — <strong>type, severity, history, prior reputation</strong>; (2) classify the crisis as <strong>victim, accidental or preventable</strong>; (3) choose a posture — <strong>deny</strong> (denial, attack accuser, scapegoat) for rumour/victim crises; <strong>diminish</strong> (excuse, justification) for low responsibility; <strong>rebuild</strong> (compensation, apology) for high responsibility or when intensifying factors (history, bad reputation) are present — always layered on informing/adjusting information and supported by <strong>bolstering</strong>; (4) <strong>maintain consistency</strong>. The art is in the match: too little accommodation reads as arrogance, too much as guilt. BP illustrates the failure of a mismatch (high blame met with deny/diminish).</p></div></details>
+  <details><summary><span class="qn">Q.</span> A pharmaceutical company learns a contaminated batch — caused by a supplier's error it had been warned about — has reached patients. Classify and prescribe a response.</summary><div class="reveal"><p class="modlab">Model answer</p><p>Because the company <em>was warned</em>, this sits between accidental and <strong>preventable</strong> — attributed responsibility is high, and the health severity is high, so the reputational threat is serious. SCCT prescribes the <strong>rebuild</strong> posture: lead with instructing/adjusting information (recall, what patients should do), then <strong>apology/mortification</strong>, <strong>compensation</strong>, and <strong>corrective action</strong> (new supplier audits). Deny/diminish would be a dangerous mismatch. Use one consistent, empathetic spokesperson; support with bolstering (the company's safety record) but never let it look like an excuse. Evaluate as it unfolds.</p></div></details>
+  <details><summary><span class="qn">Q.</span> Why did BP's communication fail in SCCT terms? Use specific strategies.</summary><div class="reveal"><p class="modlab">Model answer</p><p>BP faced a <strong>preventable, high-severity</strong> crisis with intensifying factors (safety history, weak reputation) — a maximum-blame situation requiring <strong>rebuild</strong>. Instead it used <strong>deny</strong> (shifting blame to Transocean, a disclaimer diffusing fault) and <strong>diminish</strong> (minimising the spill's impact) — a clear <strong>mismatch</strong>. It also broke the <strong>consistency</strong> rule (the story shifted from "not ours" to "we'll make it right") and chose a poor spokesperson (Hayward's "I'd like my life back" centred himself, not the victims). The result confirmed SCCT: under-accommodation in a high-blame crisis reads as arrogance and dishonesty, fuelling boycotts and a 25% value loss.</p></div></details>
+  <details><summary><span class="qn">Q.</span> What are the "intensifying factors" and why do they change the recommended response?</summary><div class="reveal"><p class="modlab">Model answer</p><p>They are a <strong>history of similar crises</strong> and a <strong>prior negative reputation</strong>. Both raise the responsibility stakeholders attribute, because a pattern or a bad track record makes the public read even an "accident" as negligence. So a crisis that might warrant only <strong>diminish</strong> on its own should be escalated to <strong>rebuild</strong> when intensifiers are present — the organisation has less benefit of the doubt and must be more accommodative to protect its reputation.</p></div></details>
 </section>
 
-<!-- CASE 2 CARREFOUR -->
-<section id="carrefour">
-  <div class="case-head">
-    <div class="case-num">Case 2</div>
-    <h2>Carrefour &amp; the boycott in China</h2>
-    <span class="lens">🧪 Teaches: Apologia &amp; Image Repair — Benoit</span>
-    <p class="facts">China · 2008 (Beijing Olympics year) · French hypermarket chain · accused of something it didn't do.</p>
+<!-- ============ CH 3 APOLOGIA + IRT ============ -->
+<section id="c3">
+  <div class="chap-head">
+    <div class="chap-num">Chapter 3</div>
+    <h2>Apologia &amp; Image Repair Theory</h2>
+    <span class="lens">📘 Ware &amp; Linkugel / Benoit (1995) · 📂 case: Carrefour in China</span>
   </div>
 
-  <h3><span class="e">📰</span> What happened</h3>
-  <p>2008 was a sensitive year: Beijing was hosting the Olympics (a huge prestige project), while human-rights groups abroad protested China's policy in Tibet and attacked the Games' sponsors. When the Olympic torch passed through Paris, protesters scuffled with a wheelchair-using Chinese athlete, Jin Jing, who was carrying the flame. Chinese citizens were furious. Then a <strong>rumour</strong> spread online that the French chain <strong>Carrefour</strong> was funding the Dalai Lama and supporting Tibetan independence. A boycott formed online, then spilled into the stores with real protests and damage. Carrefour had done nothing — it was caught by <strong>guilt by association</strong> (French company + anti-China feeling + a false rumour).</p>
-
-  <h3><span class="e">🧭</span> Read the crisis — a <em>victim</em>, but a fragile one</h3>
-  <p>Here the classification flips BP on its head. Carrefour is the <strong>victim of a false accusation</strong> — low real responsibility. By SCCT, a victim crisis (especially a rumour) can be handled with <strong>denial</strong>. <em>But</em> the threat is to its <strong>image</strong>, and that's where a second, more precise toolkit takes over: <strong>Image Repair Theory</strong> asks not "how much are you to blame?" but "<strong>what exactly is the accusation, and who is the audience you must convince?</strong>"</p>
-  <div class="call key"><span class="lab"><span aria-hidden="true">🧭</span> The logic</span>
-    <p>Benoit says an attack has two parts: an <strong>offensive act</strong> + an <strong>accusation of responsibility</strong>. Carrefour faced the accusation ("you fund the Dalai Lama") without any real act. Remove the accusation and the threat disappears — so the whole job is to <strong>kill the rumour</strong> in the eyes of the <strong>Chinese public</strong> (the audience that matters).</p>
-  </div>
-
-  <h3><span class="e">🗣️</span> What they said &amp; did</h3>
-  <p>Carrefour's <em>first</em> move was a mistake the course flags: it stayed <strong>silent for a week</strong> while anger built. Then it acted well:</p>
+  <h3 class="block t"><span aria-hidden="true">📘</span> The theory</h3>
+  <p>This is the family of theories about <strong>defending and repairing a damaged image</strong>. SCCT asks "how much are you to blame?"; these ask "<strong>what exactly is the accusation, and how do you talk your way back to a good image?</strong>"</p>
+  <h4>Apologia</h4>
+  <p><strong>Apologia</strong> is the rhetoric of <strong>self-defence</strong> (Greek <em>apologia</em>; crucially, it does <strong>not</strong> mean "apology"). It originates in <em>political</em> communication as four strategies for someone under attack for wrongdoing:</p>
+  <ol>
+    <li><strong>Denial</strong> — claim no involvement.</li>
+    <li><strong>Bolstering</strong> — divert attention to the accused's good deeds.</li>
+    <li><strong>Differentiation</strong> — remove the act from its negative context (re-describe it, compare it to something worse).</li>
+    <li><strong>Transcendence</strong> — place the act in a broader, more favourable context.</li>
+  </ol>
+  <h4>Corporate apologia</h4>
+  <p>Applied to organisations, apologia offers three routes: <strong>conciliation</strong> (acknowledge guilt, apologise, add compensation/corrective action); <strong>redefinition</strong> (diffuse the public's perception of guilt); and <strong>dissociation</strong> (separate the organisation from the crisis).</p>
   <ul>
-    <li><strong>Denial</strong> — flatly rejected any link to pro-Tibet groups.</li>
+    <li><strong>Redefinition</strong> sub-strategies: <em>provocation</em> (we reacted to hostilities), <em>defeasibility</em> (superior forces; nothing could be done), <em>good intentions</em> (acted in good faith, unexpected results), <em>minimisation</em> (the problem is small).</li>
+    <li><strong>Dissociation</strong> forms: <em>opinion–knowledge</em> ("people think we're linked, but facts say otherwise"), <em>individual–group</em> ("one person/unit is responsible, not the whole organisation"), <em>accident–essence</em> ("it happened and we're responsible, but it's an isolated incident that doesn't represent us").</li>
+  </ul>
+  <h4>Image Repair Theory (Benoit, 1995)</h4>
+  <p>Benoit <strong>systematised and expanded</strong> apologia into the most widely used image-defence framework. Two foundations: an <strong>attack has two parts</strong> — an <em>offensive act</em> + an <em>accusation of responsibility</em> (remove either and there's no threat); and you must first answer two questions — <strong>What is the accusation? Who is the key audience?</strong> (audiences ultimately validate or reject what you project). The five categories:</p>
+  <div class="card">
+    <ol>
+      <li><strong>Denial</strong> — simple denial · shifting the blame.</li>
+      <li><strong>Evasion of responsibility</strong> — provocation · <strong>defeasibility</strong> (lack of information/control) · accident · good intentions.</li>
+      <li><strong>Reducing offensiveness</strong> — bolstering · minimisation · differentiation · transcendence · attacking the accuser · compensation.</li>
+      <li><strong>Corrective action</strong> — fix the problem and/or prevent recurrence.</li>
+      <li><strong>Mortification</strong> — admit responsibility and apologise.</li>
+    </ol>
+  </div>
+  <div class="call warn"><span class="lab"><span aria-hidden="true">⚠️</span> Strengths &amp; the honest limitation</span>
+    <p>IRT is comprehensive, adaptable and excellent for training spokespeople. <strong>But</strong> apologia and IRT are <strong>descriptive, not evaluative</strong> — they name the moves but don't prove which one <em>works</em> (that's left to the practitioner). And used cynically, IRT can help a <em>guilty</em> organisation evade accountability — its ethical weak spot.</p>
+  </div>
+
+  <h3 class="block c"><span aria-hidden="true">📂</span> Case study: the Carrefour boycott in China (2008)</h3>
+  <p><strong>Context.</strong> 2008 — Beijing was hosting the Olympics (huge national prestige). Abroad, human-rights groups protested China's Tibet policy and attacked Olympic sponsors; when the torch passed through Paris, protesters scuffled with a wheelchair-using Chinese athlete carrying the flame. Chinese citizens were furious. Then a false <strong>rumour</strong> spread that the French chain <strong>Carrefour</strong> was financing the Dalai Lama and supporting Tibetan independence. A boycott formed online and then physically, with damage to stores. Carrefour had done nothing — pure <strong>guilt by association</strong>.</p>
+  <p><strong>Read it &amp; the strategy.</strong> Carrefour is a <strong>victim</strong> of a false accusation, so the question is image repair: kill the rumour in the eyes of the <strong>Chinese public</strong>. Its first move was a mistake — <strong>a week of silence</strong> — but it then executed well:</p>
+  <ul>
+    <li><strong>Denial</strong> (cat. 1) — flatly rejected the pro-Tibet link.</li>
     <li><strong>Adjusting information + sympathy</strong> — expressed concern for those affected.</li>
-    <li><strong>Ingratiation</strong> (a "reducing offensiveness" move) — praised the Beijing Olympics and China.</li>
-    <li>A clean <strong>3-step rumour-debunk</strong>: (1) acknowledge <em>why</em> people might believe it, (2) explain <em>why</em> it's untrue, (3) state the truth — its policy of staying out of politics and religion.</li>
+    <li><strong>Ingratiation</strong> (cat. 3) — praised the Beijing Olympics and China.</li>
+    <li>A 3-step <strong>rumour-debunk</strong>: acknowledge why people might believe it → explain why it's untrue → state the truth (its policy of staying out of politics and religion).</li>
   </ul>
-  <blockquote>"We and all our employees feel regretful about what happened in Paris and support the Beijing Olympics 100 percent… Carrefour is innocent, but we understand the feeling of the Chinese people."<cite>Jean-Luc Lhuillier, VP, Carrefour China — denial + sympathy + ingratiation in one breath</cite></blockquote>
-  <p>The Chinese government, meanwhile, was conflicted: it didn't want the protests to overshadow the Olympics, so it <strong>discouraged</strong> the anti-French anger and urged citizens to express patriotism "rationally" — "the best way to love your country is to do your job well."</p>
-
-  <h3><span class="e">🧪</span> The theory it teaches — Apologia &amp; Image Repair (Benoit, 1995)</h3>
-  <p>This case introduces the family of <strong>image-defence</strong> theories. They start with <strong>Apologia</strong> — the rhetoric of <em>self-defence</em> (Greek <em>apologia</em>; note: <strong>not</strong> "apology"). Its four classic moves: <strong>denial, bolstering</strong> (point to your good deeds), <strong>differentiation</strong> (take the act out of its bad context) and <strong>transcendence</strong> (put it in a bigger, kinder context). <strong>Benoit</strong> systematised and expanded all this into <strong>Image Repair Theory</strong> — five categories you can mix and match:</p>
-  <div class="card">
-    <ol>
-      <li><strong>Denial</strong> — simple denial · shifting the blame</li>
-      <li><strong>Evasion of responsibility</strong> — provocation · <strong>defeasibility</strong> (no information/control) · accident · good intentions</li>
-      <li><strong>Reducing offensiveness</strong> — bolstering · minimisation · differentiation · transcendence · attack the accuser · compensation</li>
-      <li><strong>Corrective action</strong> — fix it / prevent recurrence</li>
-      <li><strong>Mortification</strong> — admit it and apologise</li>
-    </ol>
-  </div>
-  <p>Carrefour's response now reads as a clean recipe: <strong>denial</strong> (cat. 1) + <strong>ingratiation</strong> and the rumour-debunk (cat. 3, reducing offensiveness). No corrective action or mortification was needed — because it was genuinely innocent.</p>
-  <div class="call warn"><span class="lab"><span aria-hidden="true">⚠️</span> The honest limitation</span>
-    <p>Both apologia and IRT are <strong>descriptive, not evaluative</strong> — they name the moves but don't prove which one <em>works</em>; and IRT, used cynically, can help a <em>guilty</em> organisation dodge accountability. Worth a sentence in any essay about them.</p>
+  <blockquote>"Carrefour is innocent, but we understand the feeling of the Chinese people… [we] never did and will not do anything concerned with politics and religion."<cite>Jean-Luc Lhuillier, VP Carrefour China — denial + sympathy + ingratiation</cite></blockquote>
+  <p>A third actor mattered: the <strong>Chinese government</strong>, conflicted between national pride and its Olympic image, <strong>discouraged</strong> the anti-French protests and urged "rational" patriotism ("the best way to love your country is to do your job well").</p>
+  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> Relevancy</span>
+    <p>When you are <strong>innocent but accused</strong>, the danger is the <em>accusation</em>, not an act — so respond <strong>fast</strong> (silence lets a rumour harden into truth), <strong>debunk in three honest steps</strong>, and <strong>align with what the audience values</strong> (here, the Olympics and national pride). It is also the clean counterpart to a guilty case — compare it with Qatargate (Ch.8).</p>
   </div>
 
-  <h3><span class="e">⚖️</span> Did it work?</h3>
-  <p>Largely, yes — once it stopped being silent. By denying clearly, showing cultural empathy, and praising the Olympics, Carrefour separated itself from the rumour and protected its brand in its most important market. The lasting lesson is in its one mistake: <strong>the week of silence</strong>.</p>
-
-  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> Why it matters</span>
-    <p>When you're <strong>innocent but accused</strong>, speed and audience-empathy are everything. <strong>Silence lets the rumour become the truth.</strong> Debunk it in three honest steps, show you understand <em>why</em> people were angry, and align yourself with what your audience holds dear (here: the Olympics, national pride).</p>
-  </div>
-  <div class="call tip"><span class="lab"><span aria-hidden="true">🎯</span> In the exam</span>
-    <p>Frame it as a <strong>victim / "guilt by association"</strong> crisis. Name Benoit's categories used (denial + reducing offensiveness/ingratiation) and the 3-step rumour-debunk. Criticise the week of silence. Note the third actor — the government — managing the protests for its own Olympic interest.</p>
-  </div>
+  <h3 class="block q"><span aria-hidden="true">❓</span> Potential exam questions</h3>
+  <details><summary><span class="qn">Q.</span> Compare Apologia and Image Repair Theory. What are the strengths and limits of each?</summary><div class="reveal"><p class="modlab">Model answer</p><p>Apologia is the older, rhetorical theory of <strong>self-defence</strong>, naming four moves (denial, bolstering, differentiation, transcendence) and, for organisations, three routes (conciliation, redefinition, dissociation). <strong>Benoit's IRT</strong> systematised and expanded this into <strong>five categories</strong> (denial, evasion of responsibility, reducing offensiveness, corrective action, mortification) with many sub-strategies, adding the crucial emphasis on the <strong>audience</strong> and on <em>corrective action</em> and <em>mortification</em> as repair options. Strengths: comprehensive, adaptable, useful for training spokespeople. Limits shared by both: they are <strong>descriptive, not evaluative</strong> (no proof of effectiveness), and IRT can be misused to help guilty actors dodge accountability. Illustrate with Carrefour (innocent: denial + reducing offensiveness) and Colectiv/Qatargate (accused: shifting blame, transcendence, victimage).</p></div></details>
+  <details><summary><span class="qn">Q.</span> A restaurant chain is filmed with rats in its kitchen. Construct a response using one strategy from each of Benoit's five categories, and say which you'd actually choose and why.</summary><div class="reveal"><p class="modlab">Model answer</p><p><strong>Denial:</strong> "that footage isn't from our kitchen." <strong>Evasion (defeasibility):</strong> "a city-wide infestation we couldn't have foreseen." <strong>Reducing offensiveness (minimisation + bolstering):</strong> "an isolated branch; 500 outlets with top hygiene scores." <strong>Corrective action:</strong> "immediate deep-clean, independent inspections, results published." <strong>Mortification:</strong> "we are sorry; this falls far below our standards." <br><strong>What I'd choose:</strong> since the act is real and visible, denial and evasion would be a dangerous <em>mismatch</em> (and break consistency). The credible path is <strong>mortification + corrective action</strong>, supported lightly by bolstering — accept it, fix it visibly, prove it won't recur. This also satisfies the credibility dimensions of honesty and competence.</p></div></details>
+  <details><summary><span class="qn">Q.</span> Define and distinguish: defeasibility, transcendence, differentiation, mortification.</summary><div class="reveal"><p class="modlab">Model answer</p><p><strong>Defeasibility</strong> (evasion of responsibility): plead lack of information or control — superior forces meant nothing could be done. <strong>Transcendence</strong> (reducing offensiveness): reframe the act within a bigger, more favourable context (e.g. "all of Europe faced the same shortage"). <strong>Differentiation</strong> (reducing offensiveness): take the act out of its negative context by comparing it to something worse, so it seems less bad. <strong>Mortification</strong>: the opposite of all of these — fully admit responsibility and apologise. The first three reduce <em>perceived</em> responsibility/offensiveness; mortification accepts it.</p></div></details>
+  <details><summary><span class="qn">Q.</span> Analyse Carrefour's response to the 2008 boycott using image-repair concepts.</summary><div class="reveal"><p class="modlab">Model answer</p><p>Carrefour was a <strong>victim of guilt by association</strong> — a false rumour (accusation without a real offensive act), so the task was image repair aimed at the Chinese public. Its mistake was a <strong>week of silence</strong> that let the rumour harden. Its recovery combined <strong>denial</strong> (category 1) with <strong>reducing offensiveness</strong> (category 3) via <strong>ingratiation</strong> (praising the Olympics and China) and a disciplined <strong>3-step rumour-debunk</strong>. It showed cultural empathy ("we understand the feeling of the Chinese people"), aligning with what the audience valued. The case shows IRT's logic — identify the accusation, identify the audience, and choose strategies that the audience will validate — and the cost of delay.</p></div></details>
 </section>
 
-<!-- CASE 3 COLECTIV -->
-<section id="colectiv">
-  <div class="case-head">
-    <div class="case-num">Case 3</div>
-    <h2>The Colectiv club fire</h2>
-    <span class="lens">🧪 Teaches: public-sector crisis · consistency · framing (Iyengar)</span>
-    <p class="facts">Bucharest · 30 October 2015 · 27 → 65 dead, dozens injured · brought down a government.</p>
+<!-- ============ CH 4 PLAN ============ -->
+<section id="c4">
+  <div class="chap-head">
+    <div class="chap-num">Chapter 4</div>
+    <h2>The Crisis Communication Plan</h2>
+    <span class="lens">📘 Preparation · policy · decision-making</span>
   </div>
 
-  <h3><span class="e">📰</span> What happened</h3>
-  <p>During a concert at the <strong>Colectiv</strong> club, indoor pyrotechnics set the foam ceiling alight. The initial death toll of 27 climbed to <strong>65</strong> as burn victims died over the following weeks — many because Romania's burn-care capacity was overwhelmed and patients had to be sent abroad. Public fury at corruption and lax safety enforcement exploded into <strong>mass protests</strong>; within days the Prime Minister, his government and the local mayor <strong>resigned</strong>. This is the course's deep dive into <strong>public-sector</strong> crisis communication (and it's the professor's own published research, so know it well).</p>
-
-  <h3><span class="e">🧭</span> Read the crisis</h3>
-  <p>Apply Coombs' four factors: <strong>type</strong> = accident bordering on preventable (a foreseeable safety failure); <strong>severity</strong> = very high (health and life); <strong>history</strong> = no direct prior history; <strong>relationship</strong> = no specific prior negative one. The responsibility is <em>shared and contested</em> — between the club owners, the inspectors and the institutions — which is exactly why the <em>communication</em> became a fight over <strong>who is to blame</strong>.</p>
-
-  <h3><span class="e">🗣️</span> What they said &amp; did — three failures to learn from</h3>
-  <h4>1) The club owners — shifting blame</h4>
-  <p>They accepted only partial responsibility and pointed at the inspectors and authorities ("I have my share of responsibility, but I'd like it defined correctly… what institutions made mistakes"). In Benoit's terms: <strong>denial / shifting the blame</strong> + <strong>evading responsibility</strong>.</p>
-  <h4>2) Raed Arafat (Secretary of State) — competent, but cold and defensive</h4>
-  <p>The emergency chief gave detailed, technical explanations of patient transfers abroad and the international help received (Israel, France, UK, Norway, Finland). Accused of refusing foreign help, he used <strong>transcendence</strong> — burn-care capacity was limited <em>across Europe</em>, not just Romania, so this was bigger than him. But he showed <strong>little empathy</strong>, focused on medical detail, and <strong>attacked the accusers</strong> — the TV "experts" criticising the response ("the doctor talks without knowing how the systems work"). Defensive, not consoling.</p>
-  <h4>3) The institutions — clashing voices</h4>
-  <p>The good part: fast press releases from Arafat and the Health Minister. The fatal part: <strong>their statements contradicted each other</strong>. And the authorities largely <strong>ignored social media</strong> — the official Facebook page was used to <em>post</em> information (blood donations, victim locations) but never to <em>interact</em> (one post had 99 shares and a single reply).</p>
-
-  <h3><span class="e">🧪</span> The theory it teaches</h3>
-  <p>Colectiv reuses SCCT and Benoit, but adds two ideas that matter for the exam:</p>
-  <div class="card">
-    <h4>① Consistency &amp; one voice (the crisis-plan principle)</h4>
-    <p>When Arafat and the Ministry contradicted each other, credibility leaked. This is the live demonstration of the plan's rule: <strong>one designated spokesperson, one consistent message</strong>. Contradiction in public = the audience stops trusting either source.</p>
-    <h4>② Episodic vs thematic framing — Iyengar</h4>
-    <p>How the <em>media</em> frames a crisis decides who the public blames. <strong>Episodic framing</strong> tells the story through individual events/victims → audiences blame <em>individuals</em>. <strong>Thematic framing</strong> sets it in context/trends → audiences blame the <em>system</em>. The civic movement <strong>"Corupția ucide" (Corruption Kills)</strong> used heavily <strong>thematic</strong> framing — pinning the fire on systemic corruption, not one club owner — which is exactly why it fed political consequences (resignations).</p>
-  </div>
-
-  <h3><span class="e">⚖️</span> Did it work?</h3>
-  <p>As crisis communication, mostly no: empathy was thin, voices clashed, and the state ignored the conversation happening on social media. As a political event, the thematic "systemic corruption" frame won — the government fell, and President Iohannis took the unusual step of consulting <strong>civil society</strong>. The crisis exposed how far the <strong>public sector</strong> lagged the private one in communication.</p>
-
-  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> Why it matters</span>
-    <p>Two lessons stack here. First, <strong>being right isn't enough</strong> — Arafat was often factually correct but emotionally absent, and correctness without empathy or consistency still loses public trust. Second, <strong>whoever frames the story shapes the blame</strong>: master the difference between episodic and thematic framing, because it's how a single fire became a national reckoning.</p>
-  </div>
-  <div class="call tip"><span class="lab"><span aria-hidden="true">🎯</span> In the exam</span>
-    <p>Use Colectiv to show range: classify it (Coombs), name the owners' shift-blame and Arafat's transcendence + attack-the-accuser (Benoit), diagnose the <strong>clashing voices</strong> + ignored social media (plan failures), and bring in <strong>Iyengar's episodic/thematic framing</strong> to explain the fallout. It's the case that lets you use four tools at once.</p>
-  </div>
-</section>
-
-<!-- CASE 4 TERROR -->
-<section id="terror">
-  <div class="case-head">
-    <div class="case-num">Case 4</div>
-    <h2>Terror attacks — the first message</h2>
-    <span class="lens">🧪 Teaches: the consolation script · "round-the-flag"</span>
-    <p class="facts">Nice 2016 (86†) · Brussels 2016 (32†) · London Bridge 2017 (7†) · Barcelona 2017 (13†).</p>
-  </div>
-
-  <h3><span class="e">📰</span> What happened</h3>
-  <p>Four attacks across Europe, and four heads of government who had to stand up within hours and speak to a terrified nation. A terror attack isn't only deaths and damage — it deliberately manufactures <strong>panic, fear and division</strong>. So recovery depends on communication aimed at <strong>three audiences at once</strong>: the media, the general public, and the authorities' own internal staff. This case is about the very <strong>first message</strong> — and the remarkable thing is how similar all four leaders' messages were.</p>
-
-  <h3><span class="e">🧭</span> Read the crisis</h3>
-  <p>An attack is the purest <strong>victim crisis</strong>: the nation is blameless, so there's no responsibility to deny or repair. That frees the communication to do the one thing it must — <strong>steady and unite the public</strong> while denying the attackers their real goal (fear and division). When blame isn't the question, <em>emotion and meaning</em> become the whole game.</p>
-
-  <h3><span class="e">🗣️</span> What they said — one shared script</h3>
-  <p>Across all four cases the course finds the same five-part structure. This is the <strong>"first-message template"</strong>:</p>
-  <div class="card">
-    <ol>
-      <li><strong>Express sympathy</strong> for the victims and their families.</li>
-      <li><strong>Give information</strong> on what happened + the measures being taken.</li>
-      <li><strong>Show appreciation</strong> for the emergency services and police.</li>
-      <li><strong>Emphasise unity &amp; triumph</strong> over the threat — the "round-the-flag" effect.</li>
-      <li><strong>Invoke the values</strong> the attack targeted: democracy, liberty, human rights, unity.</li>
-    </ol>
-  </div>
-  <blockquote>"What we feared has happened… I call for calm and solidarity. We have to all face this unified as one."<cite>Charles Michel, Belgian PM, after Brussels — sympathy → unity</cite></blockquote>
-  <blockquote>"The police responded with great courage and great speed… I want to thank and pay tribute to the professionalism and bravery of the police and the emergency services."<cite>Theresa May, after London Bridge — appreciation + round-the-flag</cite></blockquote>
-  <p><strong>But within the shared script, the emphasis differed</strong> — and that's the analytical payoff:</p>
+  <h3 class="block t"><span aria-hidden="true">📘</span> The theory</h3>
+  <p><strong>Purpose.</strong> A plan manages communication through a <strong>formal, clearly defined channel</strong> to mitigate the crisis and maintain a reputation of <strong>leadership and transparency</strong>. It prepares staff to respond in a <em>unified, professional</em> way and to control the flow of sensitive information.</p>
+  <h4>The policy — rules that turn up in exams</h4>
   <ul>
-    <li><strong>Hollande (Nice)</strong> — heavy emotional language ("horror", "massacre"), and an outward turn to <strong>military action</strong> in Syria and Iraq.</li>
-    <li><strong>May (London)</strong> — round-the-flag, praise for police, a four-point counter-terror plan, and the political line "<strong>enough is enough</strong>" (delivered during an election campaign).</li>
-    <li><strong>Michel (Brussels)</strong> — calm, solidarity, unity above all.</li>
-    <li><strong>Rajoy (Barcelona)</strong> — victims first, and a <strong>global</strong> framing (Madrid, Paris, Nice, Brussels, Berlin, London "have all felt the same pain").</li>
+    <li>Report every crisis to the supervisor/CEO <strong>immediately</strong>.</li>
+    <li><strong>Only</strong> the designated spokesperson (and back-ups) release information to media/public.</li>
+    <li>There is <strong>one crisis-management lead</strong> (coordinates everything, manages messages and media) <em>and</em> <strong>one spokesperson</strong> (the person who actually faces the media).</li>
+    <li>All comments are guided by <strong>professionalism and transparency</strong>.</li>
+    <li><mark>"No comment" is never an acceptable response.</mark></li>
+    <li>Personnel matters stay confidential; responses should be <strong>proactive, responsive, action-oriented</strong>.</li>
+  </ul>
+  <h4>The team &amp; the checklist</h4>
+  <p>The ideal team: CEO, PR/Communications, senior advisors/department heads, Finance, Government Relations, HR, Investor Relations, Operations, Safety, and <strong>Legal counsel</strong>. The checklist runs: <strong>Safety</strong> (people and site) → <strong>Notification</strong> (CEO at once) → convene the <strong>team</strong> → <strong>Before Going Public</strong> (assign lead + spokesperson, establish facts, decide the response, draft messages, prepare talking points) → <strong>Going Public</strong> (brief internal audiences first, then media; update website/voicemail) → <strong>Evaluate</strong> message effectiveness as it unfolds and afterward.</p>
+  <h4>What people ask first</h4>
+  <p><strong>The public:</strong> "Am I and my family safe? What affects me? What can I do to protect us? Who caused this? Can you fix it?" <strong>The media:</strong> "What happened? Who's in charge? Is it contained? Are victims helped? Why did this happen? Did you have forewarning?" A good first statement anticipates these.</p>
+  <h4>Decision-making — Kepner-Tregoe</h4>
+  <p>A named methodology for structured decisions under pressure: <strong>situation appraisal</strong> (what is going on?), <strong>decision analysis</strong> (what is the best alternative?), <strong>problem analysis</strong> (what went wrong?), and <strong>potential-problem analysis</strong> (what could go wrong?). Channel choice scales with urgency: newsletter (low) → one-on-one meetings → media release → <strong>media conference</strong> (high urgency, big issue).</p>
+
+  <h3 class="block c"><span aria-hidden="true">📂</span> Case study: what happens without a plan</h3>
+  <p>The plan's value is proven by the cases that <em>lacked</em> it. <strong>BP</strong> (Ch.2) "has not prepared a crisis communication plan," improvised under pressure, blamed third parties before acting, and even broke its <em>own</em> filed spill plan — the textbook cost of no preparation. <strong>Colectiv</strong> (Ch.7) shows the specific failure of the spokesperson rule: Secretary of State Arafat and the Ministry of Health gave press statements that <strong>contradicted each other</strong>, so the single-voice principle collapsed and credibility leaked. A classroom exercise from the course drives it home: <em>you are a school principal who receives an anonymous threat that a gunman will come today — write the media statement and the email to families.</em> The plan tells you exactly how: confirm safety first, designate the spokesperson, state the facts and the measures, never say "no comment," and give a time for the next update.</p>
+
+  <h3 class="block q"><span aria-hidden="true">❓</span> Potential exam questions</h3>
+  <details><summary><span class="qn">Q.</span> Why is "No comment" never acceptable, and what should an organisation say instead before all facts are known?</summary><div class="reveal"><p class="modlab">Model answer</p><p>"No comment" reads as evasion or guilt and cedes the narrative to others — it fails the credibility dimensions of <strong>openness</strong> and <strong>competence</strong>. Instead, issue a <strong>holding statement</strong>: confirm what is known and verified, express genuine concern for those affected, describe the immediate measures being taken, and commit to <strong>when the next update</strong> will come. This satisfies the public's first questions ("am I safe? can you fix it?") and the media's ("who's in charge?") while protecting accuracy, and it keeps the organisation as the authoritative source.</p></div></details>
+  <details><summary><span class="qn">Q.</span> Outline a crisis communication response for a chemical leak at a factory near a residential area.</summary><div class="reveal"><p class="modlab">Model answer</p><p>Follow the checklist: (1) <strong>Safety</strong> — secure the site, support evacuation. (2) <strong>Notify</strong> the CEO and convene the team (incl. Safety, Legal, Operations, Gov Relations). (3) <strong>Before going public</strong> — designate one lead + one spokesperson, establish the facts, decide the response. (4) <strong>Going public</strong> — brief internal staff and authorities first, then a media release/conference (high urgency). Content uses the <em>first-message</em> logic: concern for residents → what happened and the measures (evacuation zone, air monitoring) → what people should do (stay indoors / leave) → who is in charge → next update time. Pair the threat with a <strong>doable action</strong> (EPPM). Never "no comment"; maintain one consistent voice across the company and local authorities. (5) <strong>Evaluate</strong> and update continuously.</p></div></details>
+  <details><summary><span class="qn">Q.</span> Why does the plan insist on a single spokesperson and a single lead? Illustrate the cost of ignoring it.</summary><div class="reveal"><p class="modlab">Model answer</p><p>A single spokesperson and lead guarantee <strong>one consistent, professional message</strong> and clear coordination — essential because consistency is what makes a response credible (Coombs' rule). Multiple voices risk contradiction, which signals confusion or dishonesty and erodes trust. <strong>Colectiv</strong> shows the cost: Arafat and the Health Ministry made statements that <em>differed</em>, undermining both. The principle protects the credibility dimensions of competence and honesty.</p></div></details>
+</section>
+
+<!-- ============ CH 5 FIRST MESSAGES ============ -->
+<section id="c5">
+  <div class="chap-head">
+    <div class="chap-num">Chapter 5</div>
+    <h2>The first message after a terror attack</h2>
+    <span class="lens">📘 The consolation script · 📂 case: Nice, Brussels, London, Barcelona</span>
+  </div>
+
+  <h3 class="block t"><span aria-hidden="true">📘</span> The theory</h3>
+  <p>A terror attack inflicts deaths and destruction <em>and</em> deliberately manufactures <strong>panic, fear and division</strong>. We live in a <strong>"risk society"</strong> poorly equipped to deal with risk (Bakker), within a media-driven <strong>"culture of fear"</strong> (Furedi) — which makes the first official message extraordinarily powerful. Recovery depends on a planned strategy aimed at <strong>three audiences at once</strong>: the <strong>media</strong>, the <strong>general public</strong>, and the authorities' own <strong>internal staff</strong>.</p>
+  <div class="call key"><span class="lab"><span aria-hidden="true">📌</span> The five-part first-message template</span>
+    <ol>
+      <li><strong>Express sympathy</strong> for victims and their families.</li>
+      <li><strong>Give information</strong> on what happened and the measures being taken.</li>
+      <li><strong>Show appreciation</strong> for the emergency services and police.</li>
+      <li><strong>Emphasise unity and triumph</strong> over the threat — the <strong>"round-the-flag" effect</strong>.</li>
+      <li><strong>Invoke the values</strong> the attack targeted — democracy, liberty, human rights, unity.</li>
+    </ol>
+  </div>
+  <p>Because the nation is a <strong>victim</strong>, there is no blame to deny — so the message is not about defence but about <strong>meaning and morale</strong>: deny the attackers their goal (fear and division) by replacing panic with solidarity. The <em>differences</em> between leaders are the analytical payoff: the degree of <strong>emotion</strong>, how the <strong>call to action</strong> is framed, how the country's <strong>history</strong> of attacks is read, and what is <strong>expected of citizens</strong>.</p>
+
+  <h3 class="block c"><span aria-hidden="true">📂</span> Case study: four European attacks (2016–17)</h3>
+  <p>Nice (14 July 2016, 86 dead), Brussels (22 March 2016, 32), London Bridge (3 June 2017, 7), Barcelona (17 Aug 2017, 13). The course finds the <strong>same five-part structure</strong> in all four leaders' statements, with revealing differences in emphasis:</p>
+  <blockquote>"What we feared has happened… I call for calm and solidarity… we have to all face this unified as one."<cite>Charles Michel (Brussels) — calm, solidarity, unity above all</cite></blockquote>
+  <blockquote>"The police responded with great courage and great speed… I want to thank and pay tribute to the professionalism and bravery of the police and the emergency services."<cite>Theresa May (London) — appreciation + round-the-flag; plus a 4-step plan and "enough is enough" (during an election)</cite></blockquote>
+  <p><strong>Hollande (Nice)</strong> used heavy negative-emotion words ("horror", "massacre") and turned outward to <strong>military action</strong> in Syria and Iraq ("France… is strong and it will always be stronger"). <strong>Rajoy (Barcelona)</strong> put victims first and framed terrorism <strong>globally</strong> ("Madrid, Paris, Nice, Brussels, Berlin and London have all felt the same pain"). All reaffirmed the same fundamental values; they differed in tone (Hollande most emotive, Michel most restrained) and in the call to action (May most political and security-focused).</p>
+  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> Relevancy</span>
+    <p>In a blameless crisis your job is <strong>consolation and unity</strong>, not defence. Lead with the people, not the policy. This is the same template behind your own US–Iran presentation's "first message" point — where you argued the US <em>skipped</em> the consolation script and opened with victory and threat, the opposite of what these four leaders did.</p>
+  </div>
+
+  <h3 class="block q"><span aria-hidden="true">❓</span> Potential exam questions</h3>
+  <details><summary><span class="qn">Q.</span> What should the first official message to the public after a terror attack contain? Support with the cases.</summary><div class="reveal"><p class="modlab">Model answer</p><p>It addresses three audiences (media, public, internal staff) and follows a five-part structure: (1) <strong>sympathy</strong> for victims and families; (2) <strong>information</strong> on events and measures; (3) <strong>appreciation</strong> for emergency services and police; (4) <strong>unity and triumph</strong> over the threat (round-the-flag); (5) <strong>invocation of the values</strong> the attack targeted (democracy, liberty, human rights). All four European cases share this skeleton — e.g. Michel (Brussels) "calm and solidarity… unified as one"; May (London) thanking the police; Hollande (Nice) reaffirming France's strength. The differences lie in emotion, the call to action and the reading of national history. The aim is to deny the attackers their goal — fear and division — by replacing panic with solidarity.</p></div></details>
+  <details><summary><span class="qn">Q.</span> Compare how two leaders responded to terror attacks.</summary><div class="reveal"><p class="modlab">Model answer</p><p><strong>May (London Bridge)</strong> vs <strong>Hollande (Nice)</strong>. Both followed the template (sympathy, information, appreciation, unity, values), but May was <em>political and security-focused</em> — she praised the police, set out a four-point counter-terror plan, and used the line "enough is enough" during an election. Hollande was <em>more emotive</em> ("horror", "massacre") and turned outward to <strong>military action</strong> in Syria and Iraq, framing the attack as a strike on French values met with strength. The contrast shows the same script can carry different politics: a domestic-reform emphasis (May) versus an emotional, external-response emphasis (Hollande).</p></div></details>
+  <details><summary><span class="qn">Q.</span> Draft the opening of a Prime Minister's statement after a major attack, and justify each part.</summary><div class="reveal"><p class="modlab">Model answer</p><p>"<em>Our thoughts are with the victims and their families tonight</em> (1 — sympathy). <em>Here is what we know, and the measures we have taken to keep you safe</em> (2 — information + measures). <em>I want to thank our emergency services and police for their courage</em> (3 — appreciation). <em>We stand together; this country will not be divided by terror</em> (4 — unity / round-the-flag). <em>This was an attack on our democracy, our freedom and our way of life — values we will always defend</em> (5 — values)." Each element either consoles, informs, builds morale, or denies the attackers their goal of fear and division.</p></div></details>
+</section>
+
+<!-- ============ CH 6 RISK + EPPM ============ -->
+<section id="c6">
+  <div class="chap-head">
+    <div class="chap-num">Chapter 6</div>
+    <h2>Risk perception &amp; EPPM</h2>
+    <span class="lens">📘 Slovic · Furedi · Witte · 📂 case: COVID-19</span>
+  </div>
+
+  <h3 class="block t"><span aria-hidden="true">📘</span> The theory</h3>
+  <p><strong>The core insight:</strong> communicating risk is <em>not</em> the same as giving people data. <strong>Risk perception</strong> explains why people fear what they fear — and people are <strong>disproportionately afraid of spectacular hazards</strong> they're statistically safe from, while under-fearing common ones. <em>"People respond to the hazards they <strong>perceive</strong>"</em> (Slovic, Fischhoff &amp; Lichtenstein, 1979); and <strong>the more uncertainty a risk poses, the more it is feared</strong>.</p>
+  <p><strong>Furedi — the "culture of fear" / "risk society":</strong> the media over-expose the <em>worst-case</em> and exaggerate the scale of threats; trust in experts and authorities declines; suspicion of hidden interests rises. This primes the public for fear.</p>
+  <h4>Three research directions</h4>
+  <ol>
+    <li><strong>Psychometric (Slovic):</strong> perceived risk rises with two factor-families — <strong>Dread</strong> (uncontrollable, catastrophic, fatal, inequitable, involuntary, not-easily-reduced, increasing) and the <strong>Unknown</strong> (not observable, effects delayed, new, unknown to science). High dread + high unknown = high perceived risk, regardless of statistics.</li>
+    <li><strong>Cultural Theory of Risk (Douglas):</strong> risk attitudes compared on two dimensions — <strong>grid</strong> (the roles, control and stratification people accept) and <strong>group</strong> (the strength of bonds between them). The word "risk" is preferred to "danger" in political discourse because it carries the <em>aura of science</em> and "looks forward".</li>
+    <li><strong>Social Amplification of Risk:</strong> information processes, institutions and social groups <strong>amplify or attenuate</strong> risk signals as they pass through society (filter/decode → process → attach values → validate with peers → form intentions → act).</li>
+  </ol>
+  <div class="call key"><span class="lab"><span aria-hidden="true">🧪</span> EPPM — Extended Parallel Process Model (Kim Witte)</span>
+    <p>A model for <strong>effective public-health / crisis messages</strong>. A message works when people follow the recommended action — <strong>danger control</strong>. Two pairs of perceptions decide this: the <strong>threat</strong> — perceived <strong>susceptibility</strong> ("could this affect me?") and perceived <strong>severity</strong> ("how bad is it?"); and the <strong>efficacy</strong> — <strong>response/plan efficacy</strong> ("does the recommended action work?") and <strong>self-efficacy</strong> ("can I do it?"). The rule: <mark>high threat must be paired with high efficacy</mark>. Threat with <em>no</em> workable action pushes people into <strong>fear control</strong> — denial, avoidance, switching off.</p>
+  </div>
+
+  <h3 class="block c"><span aria-hidden="true">📂</span> Case study: COVID-19 (UK, France, Romania)</h3>
+  <p>COVID is the course's "everything at once" case: a long, frightening, <em>ongoing</em> crisis where the whole task was to persuade millions to change behaviour. Three governments did it differently.</p>
+  <h4>🇬🇧 United Kingdom — two voices</h4>
+  <p><strong>Boris Johnson</strong>: informal (sing "Happy Birthday" twice while washing hands), <strong>non-apologetic</strong>, overestimated the country's readiness. Analysts caught him using <strong>justification</strong>, <strong>transcendence</strong> and <strong>differentiation</strong> ("British exceptionalism"), and EPPM's increased <strong>severity/susceptibility</strong>. By contrast, <strong>Queen Elizabeth II</strong>'s 5 April 2020 address is the course's <strong>model</strong>: calm, rational, anchored in <strong>unity and "national spirit"</strong>, appealing to pride and connecting past–present–future; she pointedly <em>avoided the words</em> "pandemic", "coronavirus" and "crisis", and made no promises about remedies.</p>
+  <h4>🇫🇷 France — accessibility as strategy</h4>
+  <p>France made information <strong>reach everyone</strong>: a WhatsApp chatbot, the TousAntiCovid app, the Désinfox fact-checking service, easy-read <strong>FALC</strong> documents with pictograms, and material in <strong>24 languages</strong> plus sign-language-interpreted briefings. PM <strong>Castex</strong> ("Monsieur Déconfinement") was accessible but stumbled (blamed citizens; admitted not downloading the app). His 14 Jan 2021 speech is a clinic in the toolkit: <strong>transcendence</strong> ("all of Europe faces successive waves"), <strong>differentiation</strong> (France's results "more than honourable"), <strong>ingratiation/SCCT</strong> (thanking citizens and teachers), and <strong>EPPM</strong> (focus on severity + susceptibility, then self/response efficacy — our measures work, keep following them). President <strong>Macron</strong> used <strong>warrior rhetoric</strong> — "a first victory against the virus", patriotism, a tone of national superiority.</p>
+  <h4>🇷🇴 Romania — good intent, poor delivery</h4>
+  <p>Emergency decrees announced at 10–11 p.m.; specialist jargon; PM <strong>Cîțu</strong> rushed and mispronounced (even the tracing app's name). The government had to fight a <strong>top-ten list of vaccine myths</strong> ("vaccination will be compulsory", "politicians will get it first", etc.), and leaned more on <strong>warnings</strong> than on thanking compliant citizens (transcendence + differentiation: "we are in Europe, in the top three"). <strong>Arafat</strong> — the Colectiv official, carrying a prior negative reputation — returned as a trusted-but-prickly information source who criticised media pressure on medical staff.</p>
+  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> Relevancy</span>
+    <p>COVID shows <strong>every theory operating together</strong> — Coombs (justification, ingratiation), Benoit (transcendence, differentiation) and above all <strong>Witte's EPPM</strong> — and it proves the central rule: leaders succeeded by pairing realistic threat with <strong>clear, doable action</strong> (and, like the Queen, with calm and shared identity); they failed when they scared without efficacy, blamed citizens, or delivered badly.</p>
+  </div>
+
+  <h3 class="block q"><span aria-hidden="true">❓</span> Potential exam questions</h3>
+  <details><summary><span class="qn">Q.</span> Explain the EPPM and use it to fix a failing public-health message.</summary><div class="reveal"><p class="modlab">Model answer</p><p>Witte's EPPM says a fear message works only if <strong>threat</strong> (perceived susceptibility + severity) is matched with <strong>efficacy</strong> (response efficacy + self-efficacy); then people enter <strong>danger control</strong> and act. Without efficacy they default to <strong>fear control</strong> — denial, avoidance. Failing message: "A deadly virus is spreading and there's nothing you can do" — high threat, zero efficacy → panic or fatalism. Fixed: "This virus spreads fast and can be serious (susceptibility + severity); washing your hands for 20 seconds and wearing a mask significantly reduce your risk, and you can do them today (response + self-efficacy)." Now the threat motivates action rather than denial.</p></div></details>
+  <details><summary><span class="qn">Q.</span> Why do people fear terrorism or air travel more than far deadlier everyday risks? Use risk-perception theory.</summary><div class="reveal"><p class="modlab">Model answer</p><p>Because perceived risk is driven by <strong>perception, not statistics</strong> (Slovic). Terrorism and plane crashes score high on Slovic's <strong>dread</strong> factors (uncontrollable, catastrophic, involuntary, fatal) and on the <strong>unknown</strong> (unpredictable, dramatic), so they feel far riskier than driving, which is familiar, voluntary and individually controllable. <strong>Furedi's "culture of fear"</strong> amplifies this: media over-expose the worst case and trust in experts falls. <strong>Social amplification</strong> then spreads the signal through institutions and peer groups. The communication implication: address the <em>perception</em>, and pair any threat with a workable action (EPPM).</p></div></details>
+  <details><summary><span class="qn">Q.</span> Compare the COVID communication of two leaders, naming the strategies each used.</summary><div class="reveal"><p class="modlab">Model answer</p><p><strong>Queen Elizabeth II vs Boris Johnson.</strong> The Queen's 5 April 2020 address is the model: calm, rational, anchored in <strong>unity and national spirit</strong>, appealing to pride, deliberately <em>avoiding</em> alarming words ("pandemic", "crisis") and making no false promises — high on the credibility dimensions of empathy and competence. Johnson was <strong>informal</strong> and <strong>non-apologetic</strong>, overestimated readiness, and leaned on <strong>justification</strong>, <strong>transcendence</strong> and <strong>differentiation</strong> ("British exceptionalism") plus EPPM severity/susceptibility — effective at conveying threat but weaker on reassurance and consistency. The contrast shows two registers: <em>reassurance and shared identity</em> (Queen) versus <em>threat-management without accountability</em> (Johnson).</p></div></details>
+</section>
+
+<!-- ============ CH 7 COLECTIV + FRAMING ============ -->
+<section id="c7">
+  <div class="chap-head">
+    <div class="chap-num">Chapter 7</div>
+    <h2>Health &amp; security crisis — Colectiv &amp; framing</h2>
+    <span class="lens">📘 Public-sector comms · framing (Iyengar) · 📂 case: Colectiv</span>
+  </div>
+
+  <h3 class="block t"><span aria-hidden="true">📘</span> The theory</h3>
+  <p>This chapter applies SCCT and Benoit to a <strong>public-sector</strong> crisis and adds two ideas the exam likes.</p>
+  <h4>Public-sector specifics</h4>
+  <p>Public institutions face two facets — the crisis itself <em>and</em> its perception — and the course's lesson is that they must take <strong>social-media interaction</strong> seriously (not just one-way posting), be open to consulting <strong>communication experts</strong> from the private sector, and remember that <strong>political dimensions</strong> shape the response. Crucially, the rule of <strong>one consistent voice</strong> applies just as much here as in companies.</p>
+  <h4>Framing — episodic vs thematic (Shanto Iyengar)</h4>
+  <p>How the <strong>media frame</strong> a crisis decides whom the public blames. <strong>Episodic framing</strong> tells the story through specific events and individuals → audiences assign <strong>individual</strong> responsibility (and feel emotion). <strong>Thematic framing</strong> sets the story in context, trends and systems → audiences assign <strong>societal/systemic</strong> responsibility. The frame is therefore a political force: it can keep blame on one person, or escalate it to "the system".</p>
+
+  <h3 class="block c"><span aria-hidden="true">📂</span> Case study: the Colectiv club fire (2015)</h3>
+  <p><strong>What happened.</strong> On 30 October 2015, indoor pyrotechnics at the <strong>Colectiv</strong> club in Bucharest set the foam ceiling alight; the toll rose from <strong>27 to 65</strong> as burn victims died over weeks — many because Romania's burn-care capacity was overwhelmed and patients had to be transferred abroad. Public fury at corruption and lax safety enforcement produced <strong>mass protests</strong>, and within days the Prime Minister (Ponta), his government and the local mayor (Piedone) <strong>resigned</strong>. (This is the professor's own published research — know it in detail.)</p>
+  <p><strong>Read it (Coombs).</strong> Type = accident bordering on <strong>preventable</strong> (a foreseeable safety failure); severity = very high (health, life); no direct prior history; no specific prior negative relationship. Responsibility was <strong>shared and contested</strong> between club owners, inspectors and institutions — so the communication became a fight over <em>who is to blame</em>.</p>
+  <p><strong>Three communication failures (Benoit + the plan):</strong></p>
+  <ul>
+    <li><strong>Club owners — shifting blame.</strong> They accepted only partial responsibility and pointed at inspectors and authorities ("I have my share of responsibility, but I'd like it defined correctly… what institutions made mistakes"). → <em>denial / shifting blame + evading responsibility</em>.</li>
+    <li><strong>Raed Arafat — competent but cold.</strong> The emergency chief explained patient transfers and international help (Israel, France, UK, Norway, Finland) and used <strong>transcendence</strong> (burn-care capacity is limited <em>across Europe</em>, not just Romania), but showed <strong>little empathy</strong>, drowned the message in medical detail, and <strong>attacked the accusers</strong> — the TV "experts" criticising the response ("the doctor talks without knowing how the systems work"). Defensive, not consoling.</li>
+    <li><strong>The institutions — clashing voices.</strong> Fast press releases were a plus, but Arafat's and the Health Ministry's statements <strong>contradicted each other</strong>; and the authorities largely <strong>ignored social media</strong> as a channel for interaction (the official page posted information but didn't engage — one post had 99 shares and a single reply).</li>
+  </ul>
+  <p><strong>Framing &amp; outcome.</strong> The civic movement <strong>"Corupția ucide" (Corruption Kills)</strong> used heavily <strong>thematic</strong> framing — pinning the fire on <em>systemic corruption</em> rather than one club owner — which is exactly why it fed political consequences. As crisis communication the state's response largely failed (thin empathy, clashing voices, ignored social media); as a political event the thematic frame won, the government fell, and President <strong>Iohannis</strong> took the unusual step of consulting <strong>civil society</strong>.</p>
+  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> Relevancy</span>
+    <p>Two lessons: <strong>being factually right isn't enough</strong> — Arafat was often correct but emotionally absent, and correctness without empathy or consistency still loses trust; and <strong>whoever frames the story shapes the blame</strong> — episodic vs thematic framing is how a single fire became a national reckoning. Colectiv is your best "use four tools at once" case (Coombs + Benoit + the plan + Iyengar).</p>
+  </div>
+
+  <h3 class="block q"><span aria-hidden="true">❓</span> Potential exam questions</h3>
+  <details><summary><span class="qn">Q.</span> Define episodic and thematic framing (Iyengar) and apply them to the Colectiv crisis.</summary><div class="reveal"><p class="modlab">Model answer</p><p><strong>Episodic framing</strong> presents an issue through specific events or individuals, leading audiences to attribute <strong>individual</strong> responsibility and respond emotionally; <strong>thematic framing</strong> sets it in broader context and trends, leading audiences to attribute <strong>systemic</strong> responsibility. At Colectiv, framing the fire episodically (one negligent club owner) would have contained blame; instead the civic movement <strong>"Corupția ucide"</strong> framed it <strong>thematically</strong> as systemic corruption and weak state enforcement. That thematic frame mobilised mass protest and produced political consequences — the resignation of the Prime Minister, government and mayor. The case shows framing as a decisive force in directing public blame.</p></div></details>
+  <details><summary><span class="qn">Q.</span> Analyse the public authorities' communication during Colectiv using SCCT and Image Repair.</summary><div class="reveal"><p class="modlab">Model answer</p><p>By <strong>SCCT</strong> the crisis was high-severity, accident/preventable, with contested responsibility — calling for empathetic, consistent, accommodative communication. By <strong>Benoit</strong>: the club owners used <strong>denial / shifting blame</strong> and <strong>evasion</strong>; Arafat used <strong>transcendence</strong> (Europe-wide burn-care limits) and <strong>attacking the accuser</strong> (the TV "experts"), with little empathy. The decisive failures were of the <strong>crisis-plan</strong> kind: Arafat and the Ministry of Health gave <strong>contradictory statements</strong> (breaking the single-voice rule), and the state used social media only to post, not to interact. The result: competent medical handling but a damaged image, amplified by thematic media framing — and ultimately a political collapse.</p></div></details>
+  <details><summary><span class="qn">Q.</span> Why did the public-sector response to Colectiv struggle compared with a private-company response?</summary><div class="reveal"><p class="modlab">Model answer</p><p>Several reasons the course highlights: responsibility was <strong>diffuse and political</strong> (owners, inspectors, ministries), so no single actor "owned" the message; officials <strong>contradicted each other</strong>, breaking consistency; the lead voice (Arafat) was technically competent but <strong>emotionally distant</strong> and defensive; and the institutions <strong>under-used social media</strong> as a two-way channel. The lesson drawn is that the public sector should be more open to <strong>private-sector communication expertise</strong> and treat social-media interaction as essential — because a crisis has two facets, the event and its perception, and the perception was lost.</p></div></details>
+</section>
+
+<!-- ============ CH 8 QATARGATE ============ -->
+<section id="c8">
+  <div class="chap-head">
+    <div class="chap-num">Chapter 8</div>
+    <h2>Political / institutional crisis — Qatargate</h2>
+    <span class="lens">📘 Audience-tailored image repair · 📂 case: Eva Kaili</span>
+  </div>
+
+  <h3 class="block t"><span aria-hidden="true">📘</span> The theory</h3>
+  <p>This chapter pushes Image Repair Theory to its most sophisticated use and answers Benoit's second question — <strong>who is the audience?</strong> — in the strongest way. The strategies are the familiar IRT menu (denial, justification, transcendence, dissociation, victimage, equivocation), but the lesson is about <strong>tailoring</strong> and <strong>reframing</strong>:</p>
+  <ul>
+    <li><strong>Audience-centred strategy.</strong> The <em>same</em> accusation can be answered with a different mix for different publics — what persuades one audience may alienate another.</li>
+    <li><strong>Reframing.</strong> When the media have already written your story ("the glamorous corrupt politician"), image repair means offering an <strong>alternative frame</strong> the audience can adopt.</li>
+    <li><strong>Layered, timed communication.</strong> A coordinated sequence of messages across channels, languages and moments — controlling not just <em>what</em> is said but <em>when</em> and <em>to whom</em>.</li>
+    <li><strong>Equivocation</strong> — answering incompletely on the most dangerous points (e.g. others' involvement) while appearing responsive.</li>
   </ul>
 
-  <h3><span class="e">🧪</span> The theory it teaches</h3>
-  <p>This is the practical "first message" framework — you'll see it again in COVID. The deeper idea underneath is the <strong>"round-the-flag effect"</strong> (a threat to the group rallies people behind their leadership), plus the recognition that we live in a <strong>"risk society"</strong> primed for fear (Bakker, Furedi), which is what makes a calm, value-anchored first message so powerful.</p>
-
-  <h3><span class="e">⚖️</span> Did it work?</h3>
-  <p>These are the course's <em>positive</em> models. The shared template works because it does exactly what an attack tries to prevent: it replaces panic with solidarity and reasserts the values under attack. The differences (emotion, the call to action, how each reads its country's history) are where leaders express their politics.</p>
-
-  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> Why it matters</span>
-    <p>In a blameless crisis, your job isn't defence — it's <strong>meaning and morale</strong>. Lead with the people, not the policy: sympathy first, then facts, then thanks, then unity, then the values that make "us" worth defending. It's the same instinct your own presentation argued the US <em>skipped</em> when it opened with victory and threat instead of consolation.</p>
-  </div>
-  <div class="call tip"><span class="lab"><span aria-hidden="true">🎯</span> In the exam</span>
-    <p>If your case is an attack or disaster (a victim crisis), grade the leader's statement against the <strong>five elements</strong>, then say where they put the emphasis and why. Being able to <em>draft</em> such an opening, and to <em>compare two leaders</em>, is a likely question.</p>
-  </div>
-</section>
-
-<!-- CASE 5 COVID -->
-<section id="covid">
-  <div class="case-head">
-    <div class="case-num">Case 5</div>
-    <h2>COVID-19 — three countries, every theory</h2>
-    <span class="lens">🧪 Teaches: risk perception &amp; fear · EPPM (Witte)</span>
-    <p class="facts">UK · France · Romania · 2020–21 · the case where all the theories combine.</p>
-  </div>
-
-  <h3><span class="e">📰</span> What happened</h3>
-  <p>A long, frightening, <em>ongoing</em> crisis where the entire job was communication: persuade millions of people to change their behaviour. The course compares how three governments did it — and uses them to teach how <strong>fear</strong> actually works.</p>
-
-  <h3><span class="e">🧭</span> Read the crisis — it's about <em>perception</em>, not just facts</h3>
-  <p>One essential idea first: <strong>communicating risk is not the same as handing people data</strong>. People fear things out of proportion to the statistics — they over-fear the spectacular and uncertain, and under-fear the common. As Slovic put it, <em>"people respond to the hazards they <strong>perceive</strong>."</em></p>
-  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> The example that explains it</span>
-    <p>People fear <strong>plane crashes</strong> far more than <strong>car crashes</strong>, though driving is far deadlier. Why? Flying feels <em>uncontrollable, catastrophic, dreaded</em>. Slovic's <strong>psychometric</strong> model says perceived risk rises with two factor-families: <strong>dread</strong> (uncontrollable, catastrophic, involuntary…) and the <strong>unknown</strong> (unobservable, delayed, new to science). Add <strong>Furedi's "culture of fear"</strong> (media amplify the worst case; trust in experts falls) and you see why a virus triggered such fear.</p>
-  </div>
-
-  <h3><span class="e">🧪</span> The theory it teaches — EPPM (Kim Witte)</h3>
-  <p>If risk perception explains the <em>fear</em>, the <strong>Extended Parallel Process Model</strong> explains how to <em>message</em> it. Witte's rule is simple and powerful:</p>
-  <div class="call key"><span class="lab"><span aria-hidden="true">🧪</span> EPPM in one rule</span>
-    <p>A fear message works only if <strong>high threat is paired with high efficacy</strong>. Show people the danger is real (<strong>susceptibility</strong> + <strong>severity</strong>) <em>and</em> give them a doable action that works (<strong>response efficacy</strong> + <strong>self-efficacy</strong>). Then they do <strong>danger control</strong> — they act. Scare them with <em>no</em> way out, and they slide into <strong>fear control</strong> — denial, avoidance, switching off.</p>
-  </div>
-  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> Right vs wrong, in one line each</span>
-    <p>✅ "This virus spreads fast and can be serious — wash your hands for 20 seconds and wear a mask; it works." → people act.<br>❌ "The virus is everywhere and unstoppable." → no action offered → people panic or tune out.</p>
-  </div>
-
-  <h3><span class="e">🗣️</span> What they said &amp; did — three styles</h3>
-  <h4>🇬🇧 United Kingdom — a tale of two voices</h4>
-  <p><strong>Boris Johnson</strong> was informal (sing "Happy Birthday" twice while washing hands), <strong>non-apologetic</strong>, and overestimated the country's readiness; analysts caught him using <strong>justification</strong>, <strong>transcendence</strong> and <strong>differentiation</strong> ("British exceptionalism"), plus EPPM's severity/susceptibility. Against him stood <strong>Queen Elizabeth II</strong>, whose 5 April 2020 address is the course's <strong>model</strong>: calm, rational, anchored in <strong>unity and "national spirit"</strong>, and she pointedly <em>never used the words</em> "pandemic", "coronavirus" or "crisis". Same country, two registers — fear-management vs reassurance.</p>
-  <h4>🇫🇷 France — accessibility as strategy</h4>
-  <p>France leaned on making information <strong>reach everyone</strong>: a WhatsApp chatbot, the TousAntiCovid app, fact-checking services, easy-read <strong>FALC</strong> documents with pictograms, and flyers in <strong>24 languages</strong> plus sign language. PM <strong>Castex</strong> ("Monsieur Déconfinement") was accessible but stumbled (blamed citizens; admitted not downloading the app). His speeches show the toolkit explicitly: <strong>transcendence</strong> ("all of Europe faces waves"), <strong>differentiation</strong> (France's results "more than honourable"), <strong>ingratiation</strong> (thanking citizens), and <strong>EPPM efficacy</strong> (our measures work, keep following them). <strong>Macron</strong> used <strong>warrior rhetoric</strong> — "victory", patriotism, a tone of national superiority.</p>
-  <h4>🇷🇴 Romania — good intent, poor delivery</h4>
-  <p>Decrees announced at 10–11 p.m., specialist jargon, and a PM (<strong>Cîțu</strong>) who rushed and mispronounced. The government had to fight a top-10 list of <strong>vaccine myths</strong>, and leaned more on <strong>warnings</strong> than on thanking compliant citizens. <strong>Arafat</strong> (yes — the Colectiv official) returned as a trusted-but-prickly information source.</p>
-
-  <h3><span class="e">⚖️</span> Did it work? &amp; why it matters</h3>
-  <p>The comparison is the lesson: the <strong>Queen</strong> succeeded by pairing calm reassurance with shared identity; France succeeded at <strong>reaching</strong> people; leaders failed when they <strong>scared without efficacy</strong>, blamed citizens, or delivered badly. COVID is the case where <strong>every theory shows up at once</strong> — Coombs (justification, ingratiation), Benoit (transcendence, differentiation), and above all <strong>Witte's EPPM</strong>.</p>
-  <div class="call tip"><span class="lab"><span aria-hidden="true">🎯</span> In the exam</span>
-    <p>COVID is your "show everything" case. Explain risk perception (Slovic) and EPPM (Witte) first, then read a leader's choices through them. The Queen vs Johnson contrast is a ready-made compare-and-contrast answer; the "pair threat with efficacy" rule is the single most likely EPPM question.</p>
-  </div>
-</section>
-
-<!-- CASE 6 QATARGATE -->
-<section id="qatargate">
-  <div class="case-head">
-    <div class="case-num">Case 6</div>
-    <h2>Qatargate — Eva Kaili's three interviews</h2>
-    <span class="lens">🧪 Teaches: image repair tailored to each audience</span>
-    <p class="facts">European Parliament · scandal Dec 2022 · defence interviews June 2023 · France, Spain, Italy.</p>
-  </div>
-
-  <h3><span class="e">📰</span> What happened</h3>
-  <p><strong>Qatargate</strong> was a corruption scandal in the European Parliament; MEP <strong>Eva Kaili</strong> — previously a prominent, polished figure — was arrested over alleged ties to Qatar. After months in detention, in June 2023 she ran a deliberate communication counter-offensive: <strong>three newspaper interviews, in three countries, in three languages, within days</strong> — <em>Libération</em> (France), <em>El Mundo</em> (Spain) and <em>Corriere della Sera</em> (Italy). The fascinating part isn't <em>that</em> she defended herself — it's that she defended herself <strong>differently for each audience</strong>.</p>
-
-  <h3><span class="e">🧭</span> Read the crisis</h3>
-  <p>This is a <strong>preventable</strong>-type crisis (alleged personal misconduct) with very high attributed blame and a hostile media. With guilt presumed, Kaili couldn't simply deny her way out — she had to <strong>reframe the story</strong> and rebuild credibility, audience by audience. So this is Image Repair Theory at its most sophisticated: same accusation, <strong>different audiences → different strategy mix</strong>.</p>
-
-  <h3><span class="e">🗣️</span> What she said — one scandal, three frames</h3>
+  <h3 class="block c"><span aria-hidden="true">📂</span> Case study: Eva Kaili's three interviews (2023)</h3>
+  <p><strong>What happened.</strong> <strong>Qatargate</strong> was a corruption scandal in the European Parliament; MEP <strong>Eva Kaili</strong> — previously a polished, prominent figure — was arrested in December 2022 over alleged ties to Qatar. After months in detention, in June 2023 she launched a deliberate counter-offensive: <strong>three newspaper interviews, in three countries, in three languages, within days</strong>. The striking feature is that she defended herself <strong>differently for each audience</strong>.</p>
   <div class="tablewrap"><table>
-    <thead><tr><th>Outlet (country)</th><th>Central frame</th><th>Strategies used</th></tr></thead>
+    <thead><tr><th>Outlet (country)</th><th>Central frame</th><th>Strategies</th></tr></thead>
     <tbody>
-      <tr><td><strong>Libération</strong> (France)</td><td>⚖️ <strong>Judicial injustice</strong> — mistreatment in detention</td><td>denial · victimage · excuse/justification · transcendence</td></tr>
-      <tr><td><strong>El Mundo</strong> (Spain)</td><td>🕵️ <strong>Political conspiracy</strong> — Pegasus spying on MEPs</td><td>denial · justification ("gifts of equal value") · dissociation/defeasibility · transcendence · reminder</td></tr>
-      <tr><td><strong>Corriere</strong> (Italy)</td><td>❤️ <strong>Motherhood</strong> — her daughter used to pressure her</td><td>equivocation · defeasibility · excuse/justification · transcendence</td></tr>
+      <tr><td><em>Libération</em> (France)</td><td>⚖️ <strong>Judicial injustice</strong> — mistreatment in detention; the most legalistic/procedural</td><td>denial · victimage · excuse/justification · transcendence</td></tr>
+      <tr><td><em>El Mundo</em> (Spain)</td><td>🕵️ <strong>Political conspiracy</strong> — Pegasus spying on MEPs; most politically explosive, more assertive/less emotional</td><td>denial · justification ("gifts of equal value") · dissociation/defeasibility · transcendence · reminder</td></tr>
+      <tr><td><em>Corriere della Sera</em> (Italy)</td><td>❤️ <strong>Motherhood</strong> — daughter used to pressure her; most emotional, moral and human</td><td>equivocation · defeasibility · excuse/justification · transcendence · victimage</td></tr>
     </tbody>
   </table></div>
-  <blockquote>"These are souvenirs we exchanged for gifts of equal value… I can show you." (picks up a perfume, a statuette, promotional glasses)<cite>El Mundo — justification + reminder, recasting "bribes" as ordinary diplomacy</cite></blockquote>
+  <blockquote>"These are souvenirs we exchanged for gifts of equal value… I can show you." (she picks up a perfume, a statuette, promotional Qatari glasses)<cite>El Mundo — justification + reminder, recasting "bribes" as ordinary diplomacy</cite></blockquote>
   <blockquote>"Using my daughter to pressure me was a ruthless act."<cite>Corriere — victimage + emotional reframing for an Italian audience</cite></blockquote>
-
-  <h3><span class="e">🧪</span> The theory it teaches — audience is everything</h3>
-  <p>Remember Benoit's second question: <em>who is the audience?</em> Qatargate is the answer dramatised. The <strong>strategies</strong> are the same IRT menu you learned in Carrefour (denial, justification, transcendence, dissociation, victimage), but Kaili builds a <strong>layered pattern</strong> — <strong>legal in France, political in Spain, emotional in Italy</strong> — timing the releases and choosing the language to fit each public. It's a masterclass in tailoring image repair, and in <strong>reframing</strong> to take control of a narrative the media had already written ("the glamorous corrupt politician").</p>
-
-  <h3><span class="e">⚖️</span> Did it work? &amp; why it matters</h3>
-  <p>Whatever the legal outcome, as <em>communication</em> it's a coherent, theory-consistent strategy: humanise, reframe, control the narrative, and meet each audience where it is. The transferable lesson — <strong>the same facts can support several truthful frames; pick the one that fits the audience you most need to win.</strong> (And note the ethical edge IRT always carries: persuasive ≠ innocent.)</p>
-  <div class="call tip"><span class="lab"><span aria-hidden="true">🎯</span> In the exam</span>
-    <p>Use Qatargate to prove you understand IRT beyond a list: name the strategies, but make your point the <strong>audience-tailoring</strong> (legal/political/emotional by country) and the <strong>reframing</strong>. It pairs beautifully with Carrefour (innocent vs accused) to show the full range of image repair.</p>
+  <p><strong>The pattern.</strong> The course calls it a <strong>layered strategic communication pattern — legal (France), political (Spain), emotional (Italy)</strong> — with the timing of the broadcasts deliberately scheduled to reach a wide range of audiences. The aim throughout: offer an alternative to the "glamorous corrupt politician" portrayal, humanise herself, and <strong>reframe and control the narrative</strong>. As she put it: "when there is a media storm against you, you have to sit and wait for it to pass before you speak."</p>
+  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> Relevancy</span>
+    <p>The transferable lesson: <strong>the same facts can support several defensible frames; choose the one that fits the audience you most need to win</strong>. Qatargate is the advanced counterpart to Carrefour — Carrefour was <em>innocent</em> and simply needed to kill a rumour fast; Kaili was <em>accused</em> and needed to reframe a story the media had already set. Together they show the full range of image repair. (And note IRT's ethical edge: a persuasive defence is not proof of innocence.)</p>
   </div>
+
+  <h3 class="block q"><span aria-hidden="true">❓</span> Potential exam questions</h3>
+  <details><summary><span class="qn">Q.</span> How did Eva Kaili tailor her image-repair strategy to different audiences? Why is this significant for IRT?</summary><div class="reveal"><p class="modlab">Model answer</p><p>Facing one accusation, Kaili ran <strong>three interviews</strong> with three different frames: <strong>legal</strong> in France (<em>Libération</em> — judicial injustice, mistreatment in detention), <strong>political</strong> in Spain (<em>El Mundo</em> — Pegasus surveillance conspiracy), and <strong>emotional</strong> in Italy (<em>Corriere</em> — motherhood and coercion). She mixed denial, justification ("gifts of equal value"), dissociation/defeasibility, transcendence and victimage according to each public, and timed the releases to maximise reach. This matters for IRT because it dramatises Benoit's second question — <strong>who is the audience?</strong> — showing that strategy choice is <em>audience-dependent</em>: the right mix is the one a given audience will validate. It is also a case of <strong>reframing</strong> to wrest the narrative away from the media's "glamorous corrupt politician" portrayal.</p></div></details>
+  <details><summary><span class="qn">Q.</span> Analyse Kaili's defence using Benoit's categories, with examples.</summary><div class="reveal"><p class="modlab">Model answer</p><p><strong>Denial</strong> — asserting no country offered her money. <strong>Reducing offensiveness</strong> — <em>justification</em> ("souvenirs of equal value", reframing bribery as diplomacy), <em>transcendence</em> ("don't criminalise diplomatic relations and political work"), and <em>bolstering/reminder</em> (her diligent work as an MEP defending privacy). <strong>Evasion of responsibility</strong> — <em>defeasibility</em> (lack of knowledge/control over critical facts) and <em>dissociation</em> (distancing herself from Panzeri and others). <strong>Victimage</strong> — casting herself as the victim of injustice and of her daughter being used against her. <strong>Equivocation</strong> — answering incompletely on dangerous points (others' involvement). The defence is theory-consistent and coherent — though, as IRT warns, persuasiveness is not evidence of innocence.</p></div></details>
+  <details><summary><span class="qn">Q.</span> Contrast Carrefour and Kaili as image-repair cases. What does each teach?</summary><div class="reveal"><p class="modlab">Model answer</p><p><strong>Carrefour</strong> was a <em>victim</em> of a false rumour (accusation without a real act); the job was to <strong>kill the rumour fast</strong> with denial + reducing offensiveness (ingratiation) and a 3-step debunk, aligning with the Chinese audience's values — its lesson is <em>speed and audience-empathy</em>, and the cost of its week of silence. <strong>Kaili</strong> was an <em>accused</em> figure with a hostile media narrative; she couldn't simply deny, so she <strong>reframed</strong> and <strong>tailored</strong> her defence to three audiences (legal/political/emotional) — her lesson is the <em>audience-dependence</em> and <em>narrative control</em> of image repair. Together they map IRT's full range: defending innocence vs repairing a damaged, contested reputation.</p></div></details>
 </section>
 
-<!-- PLAN -->
-<section id="plan">
-  <h2 class="sec">＋ The crisis plan — the prep the failures keep proving</h2>
-  <p>You've now <em>seen</em> why preparation matters: BP had <strong>no plan</strong>; Colectiv's officials <strong>contradicted each other</strong>. The crisis-plan lecture is simply the checklist that would have prevented those failures. Its purpose: manage communication through <strong>one formal channel</strong> to protect a reputation of leadership and transparency.</p>
-  <div class="call key"><span class="lab"><span aria-hidden="true">📌</span> The rules an examiner will reward</span>
-    <ul>
-      <li>"<strong>No comment" is never acceptable</strong> — it reads as guilt. Give a holding statement and a time for the next update.</li>
-      <li><strong>One lead</strong> (coordinates everything) + <strong>one designated spokesperson</strong> (faces the media). Only they speak. <em>(Exactly what Colectiv lacked.)</em></li>
-      <li>Report immediately · be proactive and transparent · keep personnel matters confidential.</li>
-      <li><strong>Always evaluate</strong> afterwards — capture the lessons learned.</li>
-    </ul>
-  </div>
-  <p>Two more pieces worth a line each: the questions people ask first — <strong>the public:</strong> "Am I safe? What can I do? Who caused this? Can you fix it?"; <strong>the media:</strong> "What happened? Who's in charge? Why? Did you have forewarning?" — and a named decision tool, <strong>Kepner-Tregoe</strong> (situation appraisal → decision analysis → problem analysis → potential-problem analysis).</p>
-</section>
-
-<!-- TOOLKIT -->
-<section id="toolkit">
-  <h2 class="sec">＋ Toolkit recap — now that you've seen them work</h2>
-  <p>You've met every framework inside a story. Here they are in one place, so you can revise fast. Each links back to the case that teaches it.</p>
-  <details><summary><strong>SCCT — Coombs</strong> (lives in: <a href="#bp">BP</a>)</summary><div class="reveal"><p>Match your response to attributed blame (Attribution Theory). Types: <strong>victim &lt; accidental &lt; preventable</strong>; intensifiers: <strong>history + bad reputation</strong>. Postures: <strong>deny &lt; diminish &lt; rebuild</strong> (+ bolstering). Rule: match the posture to the blame and <strong>stay consistent</strong>.</p></div></details>
-  <details><summary><strong>Apologia &amp; Image Repair — Benoit</strong> (lives in: <a href="#carrefour">Carrefour</a>, <a href="#qatargate">Qatargate</a>)</summary><div class="reveal"><p>Apologia = self-defence rhetoric (denial, bolstering, differentiation, transcendence). Benoit's 5 IRT categories: <strong>denial · evasion of responsibility · reducing offensiveness · corrective action · mortification</strong>. First ask: what's the accusation? who's the audience? Both are descriptive, not evaluative.</p></div></details>
-  <details><summary><strong>EPPM &amp; risk perception — Witte / Slovic</strong> (lives in: <a href="#covid">COVID</a>)</summary><div class="reveal"><p>Perception ≠ statistics; fear rises with <strong>dread + unknown</strong> factors (Slovic) and a "culture of fear" (Furedi). EPPM: pair <strong>threat (susceptibility + severity)</strong> with <strong>efficacy (response + self)</strong> → danger control; threat without efficacy → fear control.</p></div></details>
-  <details><summary><strong>The first-message template</strong> (lives in: <a href="#terror">Terror attacks</a>)</summary><div class="reveal"><p>For a victim crisis: <strong>sympathy → information + measures → appreciation → unity/triumph → invoke values</strong>. The "round-the-flag" effect.</p></div></details>
-  <details><summary><strong>Framing — Iyengar</strong> (lives in: <a href="#colectiv">Colectiv</a>)</summary><div class="reveal"><p><strong>Episodic</strong> framing (individual events) → individual blame; <strong>thematic</strong> framing (context/trends) → systemic blame. Whoever frames the story shapes who gets blamed.</p></div></details>
-  <details><summary><strong>The crisis plan</strong> (lives in: <a href="#plan">every failure</a>)</summary><div class="reveal"><p>One lead + one spokesperson; never "no comment"; be proactive and consistent; evaluate after. Decision tool: Kepner-Tregoe.</p></div></details>
-  <details><summary><strong>What is a crisis? (the definitions)</strong></summary><div class="reveal"><p><strong>Coombs (2007):</strong> the perception of an unpredictable event threatening stakeholders' expectancies. <strong>Fearn-Banks (1996):</strong> a major occurrence with a negative outcome that can threaten the organisation's existence. Public rates you on <strong>openness · competence · fairness · empathy</strong>.</p></div></details>
-</section>
-
-<!-- EXAM -->
+<!-- EXAM TEMPLATE -->
 <section id="exam">
-  <h2 class="sec">＋ Now you do it — the exam template</h2>
-  <p>Whatever case you're given, walk this path. It's the same logic you just read six times.</p>
+  <h3 class="block t" style="border-top:2px solid var(--line);padding-top:.55rem"><span aria-hidden="true">🧩</span> How to write a case answer</h3>
+  <p>Whatever case you're given, walk this path — it mirrors the professor's own analysis checklist and earns marks in order:</p>
   <ol>
-    <li>📰 <strong>Describe</strong> the crisis — events, actors, who's responsible, the media response.</li>
-    <li>🧭 <strong>Classify</strong> the type (victim/accident/preventable) — did it shift? add intensifiers (history, reputation).</li>
-    <li>🗣️ <strong>Name the strategy</strong> — SCCT posture and/or Benoit's categories, with <em>exact sub-strategies + quotes</em>.</li>
-    <li>✅ <strong>Check the essentials</strong> — empathy? measures? <strong>consistency</strong>? one spokesperson? aligned with other actors?</li>
-    <li>🎲 <strong>Risk/EPPM</strong> — did the message pair threat with a doable action?</li>
-    <li>👥 <strong>Audience</strong> — what was the public asked to do?</li>
-    <li>⚖️ <strong>Evaluate</strong> — did it work, and what would you change? <mark>This is where the marks are.</mark></li>
+    <li><strong>Describe</strong> the crisis — events, actors, who is responsible, the media response.</li>
+    <li><strong>Classify</strong> the type (victim / accident / preventable) — did it shift? add the intensifiers (history, reputation).</li>
+    <li><strong>Name the strategy</strong> — SCCT posture and/or Benoit's categories, with <em>exact sub-strategies and quotes</em>.</li>
+    <li><strong>Check the essentials</strong> — empathy shown? measures + justification? <strong>consistency</strong>? one spokesperson? in line with other actors?</li>
+    <li><strong>Risk/EPPM</strong> — did the message pair the threat with a doable action? panic-limitation vs danger-awareness vs worst-case?</li>
+    <li><strong>Audience</strong> — what was the public asked to do (stay calm, stay home, donate, act)?</li>
+    <li><strong>Evaluate</strong> — did it work, and what would you change? <mark>This is where the top marks live.</mark></li>
   </ol>
-
-  <h3><span class="e">❓</span> Practise applying it</h3>
-  <details><summary>A factory explosion is caused by a valve the company knew was faulty but chose not to replace. Classify and prescribe.</summary><div class="reveal"><p><strong>Preventable</strong>, high blame. Wrong move = deny/diminish (BP's mistake). Right move = <strong>rebuild</strong>: accept responsibility, corrective action, compensation, one empathetic spokesperson, consistent message.</p></div></details>
-  <details><summary>A celebrity chef is filmed serving undercooked chicken. Give one move from each of Benoit's five categories.</summary><div class="reveal"><p><strong>Denial:</strong> "the footage is doctored." <strong>Evasion:</strong> "the oven thermostat failed" (defeasibility). <strong>Reducing offensiveness:</strong> "one plate of thousands; 20 years of safe kitchens" (minimisation + bolstering). <strong>Corrective action:</strong> "new temperature checks." <strong>Mortification:</strong> "I'm sorry — my fault."</p></div></details>
-  <details><summary>Rewrite this failing message with EPPM: "A deadly virus is spreading and there's nothing you can do."</summary><div class="reveal"><p>Add efficacy: "This virus spreads fast and can be serious (threat) — wash your hands for 20 seconds and wear a mask; these work and you can do them today (efficacy)." Now it drives danger control, not panic.</p></div></details>
-  <details><summary>Draft the opening of a leader's statement after a terror attack.</summary><div class="reveal"><p>Sympathy ("our thoughts are with the victims and their families") → information + measures ("here's what we know and what we're doing") → appreciation ("I thank our emergency services") → unity ("we stand together and will not be divided") → values ("this was an attack on our democracy and freedom").</p></div></details>
-  <details><summary>A TV channel covers a factory fire only through one grieving family. Which framing, and what's the effect?</summary><div class="reveal"><p><strong>Episodic</strong> (individual story) → audiences assign <strong>individual</strong> blame and feel emotion, but there's less pressure for systemic accountability. Compare "Corruption Kills" (thematic) after Colectiv.</p></div></details>
+  <p>And remember to <strong>name the theorists</strong>: Coombs, Benoit, Witte, Slovic, Furedi, Iyengar.</p>
 </section>
 
 </main>
 
 <footer>
   <p>📚 Built from your 9 course lectures (Pop-Flanja, Crisis Communication, Babeș-Bolyai). A learning aid — always defer to your slides and the professor's framing.</p>
-  <p>Understand the stories, and the theory is already yours. 💪 Good luck.</p>
+  <p>Read the theory, watch it in the case, answer the questions. 💪 Good luck.</p>
 </footer>
 </div>
 
