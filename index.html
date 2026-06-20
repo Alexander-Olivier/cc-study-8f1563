@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Crisis Communication exam study guide — SCCT, Image Repair, EPPM, crisis plan, cases.">
+<title>Crisis Communication — Study Guide</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#ffffff; --ink:#15202b; --ink-soft:#41506180; --muted:#48566a;
+    --line:#dfe3ea; --brand:#1f6feb; --brand-ink:#0b4bb3;
+    --key:#0a7d4d; --key-bg:#e7f6ee; --tip:#b5560b; --tip-bg:#fdf0e2;
+    --ex:#6b3fa0; --ex-bg:#f1ebfa; --warn:#b3261e; --warn-bg:#fbe9e7; --hook:#0c6b80; --hook-bg:#e4f4f8;
+    --maxw:760px; --radius:14px;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:Georgia,"Times New Roman",serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0f141b; --card:#171e27; --ink:#e9eef5; --ink-soft:#9fb0c3; --muted:#a9b6c7;
+      --line:#26303d; --brand:#5aa0ff; --brand-ink:#9cc4ff;
+      --key:#52d39a; --key-bg:#10302224; --tip:#f0a868; --tip-bg:#3a230d3a; --ex:#c4a6f2; --ex-bg:#241a3a44;
+      --warn:#ff8a80; --warn-bg:#3a191733; --hook:#74d0e6; --hook-bg:#0c2b3344; }
+  }
+  [data-theme="light"]{ --bg:#f6f7f9; --card:#fff; --ink:#15202b; --ink-soft:#415061; --muted:#48566a; --line:#dfe3ea; --brand:#1f6feb; }
+  [data-theme="dark"]{ --bg:#0f141b; --card:#171e27; --ink:#e9eef5; --ink-soft:#9fb0c3; --muted:#a9b6c7; --line:#26303d; --brand:#5aa0ff;
+    --key:#52d39a; --key-bg:#10302224; --tip:#f0a868; --tip-bg:#3a230d3a; --ex:#c4a6f2; --ex-bg:#241a3a44; --warn:#ff8a80; --warn-bg:#3a191733; --hook:#74d0e6; --hook-bg:#0c2b3344; }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important;transition:none!important} }
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+    font-size:1.06rem;line-height:1.62;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1rem,4vw,1.6rem)}
+
+  /* skip link + focus */
+  .skip{position:absolute;left:-999px;top:0;background:var(--brand);color:#fff;padding:.7rem 1rem;border-radius:0 0 10px 0;z-index:50}
+  .skip:focus{left:0}
+  a{color:var(--brand-ink,var(--brand))}
+  :focus-visible{outline:3px solid var(--brand);outline-offset:2px;border-radius:4px}
+
+  /* progress + topbar */
+  #bar{position:fixed;top:0;left:0;height:4px;width:0;background:var(--brand);z-index:40}
+  .topbar{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--bg) 88%,transparent);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .topbar .wrap{display:flex;align-items:center;gap:.6rem;min-height:54px}
+  .topbar .brandname{font-weight:800;font-size:1rem;letter-spacing:-.01em}
+  .topbar .spacer{flex:1}
+  .btn{font:inherit;font-size:.9rem;font-weight:600;color:var(--ink);background:var(--card);
+    border:1px solid var(--line);border-radius:999px;padding:.45rem .85rem;cursor:pointer;min-height:40px}
+  .btn:hover{border-color:var(--brand)}
+
+  /* hero */
+  header.hero{padding:clamp(2rem,7vw,3.6rem) 0 1.4rem}
+  .kick{font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;color:var(--brand)}
+  h1{font-size:clamp(1.9rem,6vw,2.7rem);line-height:1.1;letter-spacing:-.02em;margin:.5rem 0 .4rem}
+  .lede{font-size:1.12rem;color:var(--muted);margin:.2rem 0 0}
+  .meta-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.1rem}
+  .pill{font-size:.82rem;font-weight:600;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.35rem .75rem}
+
+  /* table of contents */
+  nav.toc{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:.4rem;margin:1.4rem 0}
+  nav.toc h2{font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:.6rem .8rem .2rem}
+  nav.toc ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:2px}
+  @media(min-width:560px){nav.toc ol{grid-template-columns:1fr 1fr}}
+  nav.toc a{display:block;text-decoration:none;color:var(--ink);padding:.6rem .8rem;border-radius:9px;font-weight:600;font-size:.97rem}
+  nav.toc a:hover,nav.toc a:focus-visible{background:color-mix(in srgb,var(--brand) 12%,transparent)}
+  nav.toc a .n{display:inline-block;width:1.6em;color:var(--brand);font-variant-numeric:tabular-nums}
+
+  /* sections */
+  main{padding-bottom:4rem}
+  section{margin-top:2.4rem;scroll-margin-top:64px}
+  h2.sec{font-size:clamp(1.4rem,5vw,1.9rem);letter-spacing:-.01em;line-height:1.15;margin:.2rem 0 .2rem;
+    padding-top:.8rem;border-top:2px solid var(--line)}
+  h2.sec .e{margin-right:.4rem}
+  h3{font-size:1.18rem;margin:1.5rem 0 .4rem;letter-spacing:-.01em}
+  h4{font-size:1.02rem;margin:1.1rem 0 .3rem}
+  p{margin:.6rem 0}
+  ul,ol{padding-left:1.25rem;margin:.5rem 0}
+  li{margin:.3rem 0}
+  strong{font-weight:700}
+  mark{background:color-mix(in srgb,var(--brand) 22%,transparent);color:inherit;padding:0 .15em;border-radius:3px}
+
+  /* callouts */
+  .call{border:1px solid var(--line);border-left-width:5px;border-radius:12px;padding:.85rem 1rem;margin:1rem 0;background:var(--card)}
+  .call .lab{display:inline-flex;align-items:center;gap:.4rem;font-weight:800;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+  .call p:first-of-type{margin-top:.35rem} .call p:last-child{margin-bottom:0}
+  .key{border-left-color:var(--key);background:var(--key-bg)} .key .lab{color:var(--key)}
+  .tip{border-left-color:var(--tip);background:var(--tip-bg)} .tip .lab{color:var(--tip)}
+  .ex{border-left-color:var(--ex);background:var(--ex-bg)} .ex .lab{color:var(--ex)}
+  .warn{border-left-color:var(--warn);background:var(--warn-bg)} .warn .lab{color:var(--warn)}
+  .hook{border-left-color:var(--hook);background:var(--hook-bg)} .hook .lab{color:var(--hook)}
+
+  /* cards / definition boxes */
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.1rem;margin:1rem 0}
+  .grid{display:grid;gap:.8rem;grid-template-columns:1fr}
+  @media(min-width:560px){.grid.two{grid-template-columns:1fr 1fr}}
+
+  /* tables -> scrollable + accessible */
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:1rem 0}
+  table{border-collapse:collapse;width:100%;min-width:460px;font-size:.97rem}
+  caption{caption-side:top;text-align:left;font-weight:700;padding:.6rem .8rem;color:var(--muted)}
+  th,td{text-align:left;padding:.6rem .75rem;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{background:color-mix(in srgb,var(--brand) 10%,transparent);position:sticky;top:0}
+  tbody tr:last-child td{border-bottom:0}
+
+  /* details / accordion (flashcards + Q&A) */
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:.6rem 0;overflow:hidden}
+  details[open]{border-color:color-mix(in srgb,var(--brand) 45%,var(--line))}
+  summary{cursor:pointer;padding:.85rem 1rem;font-weight:600;list-style:none;display:flex;gap:.6rem;align-items:flex-start;min-height:44px}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"►";color:var(--brand);font-size:.8em;margin-top:.25em;transition:transform .2s}
+  details[open] summary::before{transform:rotate(90deg)}
+  summary:hover{background:color-mix(in srgb,var(--brand) 8%,transparent)}
+  .reveal{padding:0 1rem 1rem 2.1rem;color:var(--ink)}
+  .reveal p:first-child{margin-top:0}
+  .fc-q{font-weight:600}
+  .badge{font-size:.7rem;font-weight:800;color:var(--tip);margin-left:.3rem}
+
+  /* steps */
+  ol.steps{counter-reset:s;list-style:none;padding-left:0}
+  ol.steps>li{position:relative;padding:.2rem 0 .2rem 2.6rem;margin:.7rem 0}
+  ol.steps>li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:0;
+    width:1.9rem;height:1.9rem;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;
+    display:grid;place-items:center;font-size:.95rem}
+
+  /* back to top */
+  #top{position:fixed;right:14px;bottom:14px;z-index:35;border:1px solid var(--line);background:var(--card);
+    color:var(--ink);border-radius:50%;width:46px;height:46px;font-size:1.2rem;cursor:pointer;display:none}
+  #top.show{display:block}
+
+  footer{border-top:1px solid var(--line);margin-top:3rem;padding:1.6rem 0;color:var(--muted);font-size:.9rem}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+</style>
+</head>
+<body data-theme="">
+<a class="skip" href="#main">Skip to main content</a>
+<div id="bar" aria-hidden="true"></div>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="brandname">🧯 Crisis Comm</span>
+    <span class="spacer"></span>
+    <button class="btn" id="themeBtn" aria-pressed="false">🌙 <span id="themeTxt">Dark</span></button>
+  </div>
+</div>
+
+<div class="wrap">
+<header class="hero">
+  <div class="kick">Babeș-Bolyai · Crisis Communication</div>
+  <h1>Crisis Communication — the exam, made learnable 🧠</h1>
+  <p class="lede">Everything from the 9 lectures, in plain language with examples, memory hooks and practice questions. Built to read on your phone.</p>
+  <div class="meta-row" aria-label="Exam facts">
+    <span class="pill">📝 Exam = 5 points</span>
+    <span class="pill">🎤 Present a crisis + analyse the comms</span>
+    <span class="pill">✍️ Short answer · essay · case analysis</span>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <h2>Jump to a topic</h2>
+    <ol>
+      <li><a href="#how"><span class="n">0</span>How to use this</a></li>
+      <li><a href="#crisis"><span class="n">1</span>What is a crisis?</a></li>
+      <li><a href="#scct"><span class="n">2</span>SCCT (Coombs) ⭐</a></li>
+      <li><a href="#apologia"><span class="n">3</span>Apologia</a></li>
+      <li><a href="#irt"><span class="n">4</span>Image Repair (Benoit) ⭐</a></li>
+      <li><a href="#risk"><span class="n">5</span>Risk &amp; EPPM (Witte)</a></li>
+      <li><a href="#plan"><span class="n">6</span>The Crisis Plan</a></li>
+      <li><a href="#terror"><span class="n">7</span>Terror first-messages ⭐</a></li>
+      <li><a href="#framing"><span class="n">8</span>Framing</a></li>
+      <li><a href="#cases"><span class="n">9</span>Cases at a glance</a></li>
+      <li><a href="#template"><span class="n">10</span>How to answer a case</a></li>
+      <li><a href="#flash"><span class="n">11</span>Flashcards</a></li>
+      <li><a href="#exam"><span class="n">12</span>Practice exam</a></li>
+    </ol>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- 0 -->
+<section id="how">
+  <h2 class="sec"><span class="e" aria-hidden="true">🗺️</span>How to use this</h2>
+  <p>The exam asks you to <strong>present a real crisis and analyse the communication strategies</strong> used. So don't just memorise — practise <em>applying</em> the theories to cases. Every section here ends with how it shows up in the exam.</p>
+  <div class="call tip"><span class="lab"><span aria-hidden="true">📅</span> 5-day plan</span>
+    <ol>
+      <li><strong>Day 1</strong> — read §1–§6 once, slowly.</li>
+      <li><strong>Day 2</strong> — drill the <a href="#flash">flashcards</a> until the ⭐ ones are automatic.</li>
+      <li><strong>Day 3</strong> — <a href="#exam">practice exam</a> Sections A &amp; B, closed-book.</li>
+      <li><strong>Day 4</strong> — practice exam Section C (case analysis) — that's where the marks are.</li>
+      <li><strong>Day 5</strong> — flashcards again + reread the <a href="#template">case-analysis template</a>. Light review.</li>
+    </ol>
+  </div>
+  <div class="call key"><span class="lab"><span aria-hidden="true">🎯</span> The 6 most testable things</span>
+    <ol>
+      <li>SCCT crisis types (victim / accident / preventable) + matching the response.</li>
+      <li>Benoit's 5 Image-Repair categories with named sub-strategies + examples.</li>
+      <li>The terror first-message template (sympathy → info → thanks → unity → values).</li>
+      <li>EPPM — threat must be paired with <em>efficacy</em>.</li>
+      <li>Crisis-plan rules — "no comment" never; one spokesperson; consistency.</li>
+      <li>Naming theorists: Coombs, Benoit, Witte, Slovic, Iyengar, Furedi.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- 1 -->
+<section id="crisis">
+  <h2 class="sec"><span class="e" aria-hidden="true">🌊</span>1. What is a crisis?</h2>
+  <p>Three definitions from the course. Learn one well and be able to <strong>name the author</strong>.</p>
+  <div class="grid two">
+    <div class="card"><h4>Coombs (2007)</h4><p>The <strong>perception</strong> of an unpredictable event that threatens stakeholders' important <strong>expectancies</strong> and can seriously damage performance.</p></div>
+    <div class="card"><h4>Fearn-Banks (1996)</h4><p>A major occurrence with a potentially <strong>negative outcome</strong>; it interrupts normal business and can <strong>threaten the organisation's existence</strong>.</p></div>
+  </div>
+  <p><strong>Seeger, Sellnow &amp; Ulmer (1998):</strong> a specific, <strong>unexpected, non-routine</strong> event creating <strong>high uncertainty</strong> and threat to an organisation's high-priority goals.</p>
+
+  <h3>The anatomy of a crisis 🧬</h3>
+  <p>Unexpected · poses a threat · potentially hazardous · needs <strong>rapid action</strong> · management has <strong>limited control</strong> · unpredictable effects · grabs <strong>media + public</strong> attention.</p>
+
+  <div class="call key"><span class="lab"><span aria-hidden="true">📌</span> Key: the 4 credibility dimensions</span>
+    <p>The public rates an authority on: <strong>openness/honesty · competence · fairness · empathy</strong>. Use these four as a quick scorecard in any case analysis.</p>
+  </div>
+  <div class="call hook"><span class="lab"><span aria-hidden="true">🧠</span> Memory hook</span>
+    <p>Crisis = the <strong>3 dimensions</strong>: the <em>actual</em> crisis, how you <em>handle</em> it, and the <em>image</em>. You can lose on image even if you handled the event — exactly the point of "winning the war, losing the story." 😉</p>
+  </div>
+</section>
+
+<!-- 2 SCCT -->
+<section id="scct">
+  <h2 class="sec"><span class="e" aria-hidden="true">⚖️</span>2. SCCT — Situational Crisis Communication Theory ⭐</h2>
+  <p><strong>W. Timothy Coombs (2007).</strong> The headline idea: <mark>match your response to how much the public blames you</mark> (the attributed responsibility) and to the reputational threat. It's built on <strong>Attribution Theory</strong> — people look for someone to blame; the more blame, the more you must accommodate.</p>
+
+  <h3>Step 1 — Size up the reputational threat (4 factors)</h3>
+  <ul>
+    <li><strong>Crisis type</strong> (sets the baseline responsibility)</li>
+    <li><strong>Severity</strong> of the harm</li>
+    <li><strong>History</strong> of similar crises</li>
+    <li><strong>Prior reputation</strong> / relationship</li>
+  </ul>
+  <div class="call warn"><span class="lab"><span aria-hidden="true">⚠️</span> The 2 "intensifying factors"</span>
+    <p>A <strong>history of crises</strong> and a <strong>prior negative reputation</strong> push any crisis toward <em>higher</em> blame. Same event, worse position if you've got baggage.</p>
+  </div>
+
+  <h3>Step 2 — The 3 crisis types (low → high blame)</h3>
+  <div class="tablewrap" role="region" aria-label="SCCT crisis types" tabindex="0">
+  <table>
+    <thead><tr><th>Cluster</th><th>Blame</th><th>Course examples</th><th>👉 Everyday example</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Victim</strong></td><td>Minimal</td><td>natural disaster, rumour, product tampering, workplace violence</td><td>An earthquake damages your factory; a hacker leaks your customer data.</td></tr>
+      <tr><td><strong>Accidental</strong></td><td>Low</td><td>technical-error accident, challenges</td><td>A faulty part from a supplier causes a recall — you didn't intend it.</td></tr>
+      <tr><td><strong>Preventable</strong></td><td>Strong</td><td>human error, organisational misdeed, management misconduct</td><td>Your CEO is caught lying to regulators; you ignored safety warnings.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Step 3 — The response strategies</h3>
+  <div class="grid">
+    <div class="card"><h4>🚫 DENY <span style="font-weight:400;color:var(--muted)">(reject blame)</span></h4>
+      <ul><li><strong>Attack the accuser</strong></li><li><strong>Denial</strong> — there is no crisis</li><li><strong>Scapegoat</strong> — blame someone outside</li></ul></div>
+    <div class="card"><h4>🪶 DIMINISH <span style="font-weight:400;color:var(--muted)">(shrink blame)</span></h4>
+      <ul><li><strong>Excuse</strong> — we didn't intend harm</li><li><strong>Justification</strong> — the damage is small</li></ul></div>
+    <div class="card"><h4>🛠️ REBUILD <span style="font-weight:400;color:var(--muted)">(most accommodative)</span></h4>
+      <ul><li><strong>Compensation</strong> — money/gifts to victims</li><li><strong>Apology</strong> — full responsibility + ask forgiveness</li></ul></div>
+    <div class="card"><h4>➕ BOLSTERING <span style="font-weight:400;color:var(--muted)">(secondary support)</span></h4>
+      <ul><li><strong>Reminder</strong> — our past good works</li><li><strong>Ingratiation</strong> — praise stakeholders</li><li><strong>Victimage</strong> — we're victims too</li></ul></div>
+  </div>
+
+  <div class="call key"><span class="lab"><span aria-hidden="true">📌</span> The matching rule (+ the golden rule)</span>
+    <p>Low blame (victim) → informing/adjusting info, deny/diminish. High blame (preventable) or any intensifying factor → <strong>rebuild</strong> (apologise, compensate, fix). And above all: <mark>maintain consistency</mark>. A shifting story reads as deception — the single most testable SCCT principle.</p>
+  </div>
+
+  <h3>📚 Case: BP — Deepwater Horizon (2010)</h3>
+  <p>The rig (Transocean-owned, BP-leased) exploded: <strong>11 dead, 4.9m barrels</strong> spilled. Type = preventable/accident, <strong>high responsibility</strong>.</p>
+  <ul>
+    <li>❌ Started with <strong>deny + shift blame</strong> ("it was Transocean's rig") and <strong>minimisation</strong> ("environmental impact… very modest") — wrong posture for high blame.</li>
+    <li>❌ Spokesperson <strong>Tony Hayward</strong> was arrogant &amp; self-focused: <em>"I'd like my life back."</em> No crisis plan. Tried to limit the media. Offered plaintiffs $5,000 to drop suits.</li>
+    <li>✅ Later <strong>rebuild</strong>: $20bn fund, "We will make this right" ads, research initiative.</li>
+    <li>📉 Result: lost ~25% of market value. Textbook mismatch + broken consistency.</li>
+  </ul>
+  <div class="call tip"><span class="lab"><span aria-hidden="true">🎯</span> Exam move</span>
+    <p>If you classify a crisis as <strong>preventable</strong> but the org responds with <strong>deny/diminish</strong>, that mismatch <em>is</em> your analysis. Say it explicitly and name the fix (rebuild + consistent, empathetic single voice).</p>
+  </div>
+</section>
+
+<!-- 3 Apologia -->
+<section id="apologia">
+  <h2 class="sec"><span class="e" aria-hidden="true">🗣️</span>3. Apologia &amp; Corporate Apologia</h2>
+  <p><strong>Apologia</strong> = the rhetoric of <strong>self-defence</strong> (Greek <em>apologia</em>) — <mark>not</mark> "an apology". An organisation may deny, explain, or apologise through rhetorical strategies.</p>
+
+  <h3>The 4 classic strategies</h3>
+  <ul>
+    <li><strong>Denial</strong> — I wasn't involved.</li>
+    <li><strong>Bolstering</strong> — look at all my good deeds.</li>
+    <li><strong>Differentiation</strong> — take the act out of its bad context (compare to something worse).</li>
+    <li><strong>Transcendence</strong> — put the act in a bigger, more favourable context.</li>
+  </ul>
+
+  <h3>Corporate apologia — 3 strategies</h3>
+  <div class="grid">
+    <div class="card"><h4>🤝 Conciliation</h4><p>Admit guilt, apologise, offer compensation + corrective action.</p></div>
+    <div class="card"><h4>🎭 Redefinition</h4><p>Diffuse the public's perception of guilt — via <strong>provocation</strong> (we reacted to hostility), <strong>defeasibility</strong> (forces beyond control), <strong>good intentions</strong>, <strong>minimisation</strong>.</p></div>
+    <div class="card"><h4>🔌 Dissociation</h4><p>Separate the org from the crisis — <strong>opinion–knowledge</strong> (facts say otherwise), <strong>individual–group</strong> (one person, not us all), <strong>accident–essence</strong> (isolated, not who we are).</p></div>
+  </div>
+  <div class="call warn"><span class="lab"><span aria-hidden="true">⚠️</span> The catch (Pros/Cons)</span>
+    <p>Apologia is a brilliant <em>foundation</em> and named many response types first — <strong>but it's descriptive, not evaluative</strong>: it doesn't tell you which strategy actually <em>works</em>. (Same limitation as IRT.)</p>
+  </div>
+</section>
+
+<!-- 4 IRT -->
+<section id="irt">
+  <h2 class="sec"><span class="e" aria-hidden="true">🩹</span>4. Image Repair Theory — Benoit (1995) ⭐</h2>
+  <p>A classification of strategies to <strong>restore a damaged image after an attack</strong>. An <strong>attack = an offensive act + an accusation of responsibility</strong> (remove either and there's no threat). Benoit says first ask: <strong>What is the accusation?</strong> and <strong>Who is the key audience?</strong> (audiences validate or reject what you project).</p>
+
+  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> One running example: the "BrewCo" milk scare ☕</span>
+    <p><em>Invented to make the 5 categories stick.</em> Imagine your favourite coffee chain, <strong>BrewCo</strong>, is accused of serving contaminated milk that made customers sick. Here's how each repair strategy sounds:</p>
+  </div>
+
+  <div class="tablewrap" role="region" aria-label="Benoit's five image repair categories" tabindex="0">
+  <table>
+    <caption>Benoit's 5 categories — with the BrewCo line for each</caption>
+    <thead><tr><th>Category</th><th>Sub-strategies</th><th>☕ BrewCo says…</th></tr></thead>
+    <tbody>
+      <tr><td><strong>1. Denial</strong></td><td>simple denial · shifting the blame</td><td>"Our milk was fine — it was the supplier's fault." </td></tr>
+      <tr><td><strong>2. Evasion of responsibility</strong></td><td>provocation · <strong>defeasibility</strong> · accident · good intentions</td><td>"The cold-chain failed in transit — beyond our control." </td></tr>
+      <tr><td><strong>3. Reducing offensiveness</strong></td><td>bolstering · minimisation · differentiation · transcendence · attack accuser · compensation</td><td>"Only a few cups affected, and we've served safe coffee for 30 years." </td></tr>
+      <tr><td><strong>4. Corrective action</strong></td><td>fix it / prevent recurrence</td><td>"We've recalled the batch and added daily safety tests." </td></tr>
+      <tr><td><strong>5. Mortification</strong></td><td>admit + apologise</td><td>"We are truly sorry. We take full responsibility." </td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="call hook"><span class="lab"><span aria-hidden="true">🧠</span> Memory hook</span>
+    <p><strong>D-E-R-C-M</strong> → <em>"Don't Even Repair Crises Messily."</em> Denial, Evasion, Reducing offensiveness, Corrective action, Mortification.</p>
+  </div>
+
+  <h3>📚 Case: Carrefour boycott, China (2008)</h3>
+  <p>During the Beijing Olympics, rumours spread that Carrefour funded the Dalai Lama → online + physical boycott. A classic <strong>"guilt by association"</strong> victim situation.</p>
+  <ul>
+    <li>❌ Stayed silent for a week (a mistake).</li>
+    <li>✅ Then: <strong>denial</strong> of pro-Tibet links + <strong>adjusting information</strong> + <strong>sympathy</strong> + <strong>ingratiation</strong> (praised the Olympics &amp; China).</li>
+    <li>✅ <strong>Rumour-debunk in 3 steps</strong>: (1) acknowledge why people might believe it, (2) explain why it's untrue, (3) state the truth (neutral on politics/religion).</li>
+  </ul>
+  <p>VP Lhuillier: <em>"Carrefour is innocent, but we understand the feeling of the Chinese people."</em> The government, conflicted, urged <strong>"rational" patriotism</strong>.</p>
+</section>
+
+<!-- 5 Risk + EPPM -->
+<section id="risk">
+  <h2 class="sec"><span class="e" aria-hidden="true">🎲</span>5. Risk Perception &amp; EPPM (Witte)</h2>
+  <p>Big idea: communicating risk is <mark>not</mark> just handing people data. <strong>Risk perception</strong> explains <em>why people fear what they fear</em> — and they over-fear spectacular, uncertain hazards while under-fearing common ones. <em>"People respond to the hazards they <strong>perceive</strong>"</em> (Slovic, Fischhoff &amp; Lichtenstein 1979).</p>
+
+  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> Example</span>
+    <p>People fear <strong>plane crashes</strong> far more than <strong>car crashes</strong>, though driving is statistically far deadlier. Planes feel <em>uncontrollable, catastrophic, dreaded</em> — the perception, not the statistic, drives the fear.</p>
+  </div>
+
+  <h3>Why fear gets amplified</h3>
+  <ul>
+    <li><strong>Furedi — "culture of fear" / "risk society":</strong> media pump the worst-case, trust in experts declines, suspicion of hidden interests rises.</li>
+    <li><strong>Slovic's psychometric factors:</strong> <strong>Dread</strong> (uncontrollable, catastrophic, fatal, involuntary…) + <strong>Unknown</strong> (unobservable, delayed, new, unknown to science). More dread + more unknown = more perceived risk.</li>
+    <li><strong>Cultural Theory (Douglas):</strong> attitudes compared on <strong>grid</strong> (roles/control) × <strong>group</strong> (bonds).</li>
+    <li><strong>Social Amplification of Risk:</strong> institutions &amp; social groups <strong>amplify or dampen</strong> risk signals as they pass through society.</li>
+  </ul>
+
+  <h3>⭐ EPPM — Extended Parallel Process Model (Kim Witte)</h3>
+  <p>A model for effective public-health / crisis messages. It runs on four perceptions:</p>
+  <div class="grid two">
+    <div class="card"><h4>The threat</h4><ul><li><strong>Perceived susceptibility</strong> — could this hit me?</li><li><strong>Perceived severity</strong> — how bad is it?</li></ul></div>
+    <div class="card"><h4>The efficacy</h4><ul><li><strong>Response efficacy</strong> — does the action work?</li><li><strong>Self-efficacy</strong> — can <em>I</em> do it?</li></ul></div>
+  </div>
+  <div class="call key"><span class="lab"><span aria-hidden="true">📌</span> The one rule to remember</span>
+    <p><mark>High threat must be paired with high efficacy.</mark> Then people do <strong>danger control</strong> (act on the danger). Threat with <em>no</em> doable action → <strong>fear control</strong> (denial, avoidance, tuning out).</p>
+  </div>
+  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> Example (done right vs wrong)</span>
+    <p>✅ <em>"COVID is spreading fast (threat). Wash your hands for 20s and wear a mask — it works (efficacy)."</em> → people act.<br>❌ <em>"COVID is everywhere and unstoppable."</em> → no action offered → people panic or shut down.</p>
+  </div>
+</section>
+
+<!-- 6 Plan -->
+<section id="plan">
+  <h2 class="sec"><span class="e" aria-hidden="true">📋</span>6. The Crisis Communication Plan</h2>
+  <p><strong>Purpose:</strong> manage communication through a <strong>formal, single channel</strong> to mitigate the crisis and protect a reputation of leadership and transparency.</p>
+
+  <div class="call warn"><span class="lab"><span aria-hidden="true">⚠️</span> Rules examiners love</span>
+    <ul style="margin:.3rem 0 0">
+      <li><strong>"No comment" is NEVER acceptable.</strong></li>
+      <li>Only the <strong>designated spokesperson</strong> (and back-ups) talk to media.</li>
+      <li><strong>One lead</strong> (coordinates) + <strong>one spokesperson</strong> (faces media).</li>
+      <li>Report immediately · be proactive, transparent, action-oriented · keep personnel matters confidential.</li>
+    </ul>
+  </div>
+
+  <h3>The questions people ask first 🙋</h3>
+  <div class="grid two">
+    <div class="card"><h4>The public asks</h4><p>Am I/my family <strong>safe</strong>? What affects me? What can I do? <strong>Who caused this?</strong> Can you fix it?</p></div>
+    <div class="card"><h4>The media asks</h4><p>What happened? Who's in charge? Is it contained? Are victims helped? <strong>Why</strong> did this happen? Did you have <strong>forewarning</strong>?</p></div>
+  </div>
+
+  <h3>Decision-making: Kepner-Tregoe</h3>
+  <p>Four lenses: <strong>situation appraisal</strong> (what's going on?) · <strong>decision analysis</strong> (best option?) · <strong>problem analysis</strong> (what went wrong?) · <strong>potential-problem analysis</strong> (what could go wrong?).</p>
+  <p class="muted"><strong>Team:</strong> CEO · PR/Comms · senior advisors · Finance · Gov Relations · HR · Investor Relations · Operations · Safety · <strong>Legal</strong>. <strong>Checklist:</strong> Safety → Notify → Team → Before Going Public → Going Public → <strong>Evaluate</strong>.</p>
+</section>
+
+<!-- 7 Terror -->
+<section id="terror">
+  <h2 class="sec"><span class="e" aria-hidden="true">🕯️</span>7. First messages after a terror attack ⭐</h2>
+  <p>A terror attack causes death and destruction <strong>plus</strong> wider panic and fear. Recovery needs a planned strategy for <strong>three audiences: the media, the public, and internal staff</strong>. Four cases: <strong>Nice 2016, Brussels 2016, London Bridge 2017, Barcelona 2017</strong>.</p>
+
+  <div class="call key"><span class="lab"><span aria-hidden="true">📌</span> The first-message template (memorise the 5)</span>
+    <ol class="steps">
+      <li><strong>Express sympathy</strong> for victims &amp; families.</li>
+      <li><strong>Give information</strong> on the situation + measures taken.</li>
+      <li><strong>Show appreciation</strong> for emergency services &amp; police.</li>
+      <li><strong>Emphasise unity &amp; triumph</strong> over the threat ("round-the-flag effect").</li>
+      <li><strong>Invoke the values</strong> the attack targeted: democracy, liberty, human rights, unity.</li>
+    </ol>
+  </div>
+  <div class="call hook"><span class="lab"><span aria-hidden="true">🧠</span> Memory hook</span><p><strong>S-I-A-U-V</strong> → <em>Sympathy, Info, Appreciation, Unity, Values.</em></p></div>
+
+  <p><strong>How leaders differed:</strong> Hollande (Nice) — emotive words + military response; May (London) — round-the-flag, praises police, a 4-step plan, "enough is enough"; Michel (Brussels) — calm, solidarity, unity; Rajoy (Barcelona) — victims first, global framing. <em>The differences are in emotion level, the call-to-action, and how each reads its country's history.</em></p>
+  <div class="call tip"><span class="lab"><span aria-hidden="true">🎯</span> Exam tip</span><p>This is the same template behind your own presentation's "first message" point. If a case is a <strong>victim</strong> crisis (attack, disaster), grade it against these 5 elements.</p></div>
+</section>
+
+<!-- 8 Framing -->
+<section id="framing">
+  <h2 class="sec"><span class="e" aria-hidden="true">🖼️</span>8. Framing (Iyengar) &amp; Colectiv</h2>
+  <p><strong>Episodic vs thematic framing (Shanto Iyengar):</strong></p>
+  <ul>
+    <li><strong>Episodic</strong> = single events/people → audiences blame the <strong>individual</strong>. <em>(e.g. "a club owner's negligence.")</em></li>
+    <li><strong>Thematic</strong> = context/trends → audiences blame the <strong>system</strong>. <em>(e.g. "Corruption Kills" — Romania's systemic failure.)</em></li>
+  </ul>
+  <h3>📚 Case: Colectiv (2015)</h3>
+  <p>Bucharest club fire, 30 Oct 2015, 27→65 dead. Type = <strong>accident/preventable, high severity, no prior history</strong>.</p>
+  <ul>
+    <li>Club owners: <strong>partial shifting of blame</strong> (point at inspectors).</li>
+    <li>Sec. of State <strong>Raed Arafat</strong>: technical explanations, <strong>transcendence</strong> (Europe-wide burn-care limits), <strong>attacks the accusers</strong> (TV "experts"), little empathy.</li>
+    <li>❌ <strong>Clashing statements</strong> between Arafat and the Ministry of Health — a consistency failure.</li>
+    <li>❌ Public sector ignored <strong>social media</strong> (info-only, no interaction).</li>
+    <li>➡️ Political crisis: PM Ponta, government &amp; mayor <strong>resigned</strong>; President Iohannis consulted civil society.</li>
+  </ul>
+</section>
+
+<!-- 9 Cases -->
+<section id="cases">
+  <h2 class="sec"><span class="e" aria-hidden="true">🗂️</span>9. Cases at a glance</h2>
+  <div class="tablewrap" role="region" aria-label="Case summary table" tabindex="0">
+  <table>
+    <thead><tr><th>Case</th><th>Type (SCCT)</th><th>Dominant strategies</th><th>Lesson</th></tr></thead>
+    <tbody>
+      <tr><td><strong>BP / Deepwater Horizon</strong></td><td>Preventable, high</td><td>(badly) deny + shift blame → later rebuild</td><td>Don't blame third parties first; arrogant spokesperson + no plan = disaster.</td></tr>
+      <tr><td><strong>Carrefour / China 2008</strong></td><td>Victim (guilt by association)</td><td>denial · adjusting info · ingratiation · rumour-debunk</td><td>Respond fast; debunk rumours in 3 steps; show cultural empathy.</td></tr>
+      <tr><td><strong>Colectiv 2015</strong></td><td>Accident/preventable, high</td><td>shift blame · transcendence · attack accuser</td><td>Inconsistent voices + ignoring social media sank it.</td></tr>
+      <tr><td><strong>Terror attacks (×4)</strong></td><td>Victim</td><td>the 5-part first-message template</td><td>One coherent consolation script; round-the-flag.</td></tr>
+      <tr><td><strong>COVID (UK/FR/RO)</strong></td><td>Victim / ongoing</td><td>Benoit + Coombs + EPPM together</td><td>Queen = calm/unity model; Johnson = non-apologetic; efficacy matters.</td></tr>
+      <tr><td><strong>Qatargate / Kaili</strong></td><td>Preventable (alleged)</td><td>denial · victimage · justification · transcendence</td><td>Layered by country: legal (FR) · political (ES) · emotional (IT).</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> COVID quick-recall</span>
+    <p><strong>Queen Elizabeth II</strong> — calm, rational, "national spirit", avoided the words "pandemic/crisis": a <em>model</em> address. <strong>Macron</strong> — warrior rhetoric, "victory". <strong>Johnson</strong> — informal, non-apologetic. <strong>France</strong> — accessibility champion (easy-read FALC, 24 languages, sign language).</p>
+  </div>
+  <div class="call ex"><span class="lab"><span aria-hidden="true">💡</span> Qatargate quick-recall</span>
+    <p>Eva Kaili gave 3 interviews in 3 countries/languages, each with a different frame: <strong>France = legal</strong> (judicial injustice), <strong>Spain = political</strong> (Pegasus spying), <strong>Italy = emotional</strong> (motherhood). A timed, layered, narrative-reframing strategy.</p>
+  </div>
+</section>
+
+<!-- 10 Template -->
+<section id="template">
+  <h2 class="sec"><span class="e" aria-hidden="true">🧩</span>10. How to answer a CASE question</h2>
+  <p>Use this exact order in the exam — it mirrors the professor's presentation checklist and earns the marks in sequence.</p>
+  <ol class="steps">
+    <li><strong>Describe the crisis</strong> — events, actors, who's responsible, the media response.</li>
+    <li><strong>Classify the type</strong> (victim / accident / preventable) — note if it <em>shifted</em> + the intensifying factors (history, reputation).</li>
+    <li><strong>Name the strategy</strong> — SCCT posture (deny/diminish/rebuild) and/or Benoit's categories, with <em>exact sub-strategies + quotes</em>.</li>
+    <li><strong>Check the first-message elements</strong> — empathy? measures? justification? appreciation? <strong>consistency</strong>? aligned with other actors?</li>
+    <li><strong>Spokesperson</strong> — good choice? one voice or clashing voices?</li>
+    <li><strong>Risk/EPPM</strong> — did it pair threat with a doable action? panic-limitation vs danger-awareness?</li>
+    <li><strong>Audience</strong> — what was the public asked to do (stay home, donate, stay calm)?</li>
+    <li><strong>Evaluate</strong> — did it work, and what would you change? <mark>Top marks live here.</mark></li>
+  </ol>
+</section>
+
+<!-- 11 Flashcards -->
+<section id="flash">
+  <h2 class="sec"><span class="e" aria-hidden="true">🃏</span>11. Flashcards</h2>
+  <p>Tap a card to reveal the answer. ⭐ = high-yield.</p>
+
+  <details><summary><span class="fc-q">3 SCCT crisis types, in order of blame <span class="badge">⭐</span></span></summary><div class="reveal"><p><strong>Victim</strong> (lowest) → <strong>Accidental</strong> → <strong>Preventable</strong> (highest).</p></div></details>
+  <details><summary><span class="fc-q">The 2 SCCT intensifying factors <span class="badge">⭐</span></span></summary><div class="reveal"><p>A <strong>history</strong> of similar crises + a <strong>prior negative reputation</strong>.</p></div></details>
+  <details><summary><span class="fc-q">The 3 SCCT response postures + 1 strategy each</span></summary><div class="reveal"><p><strong>Deny</strong> (denial/attack accuser/scapegoat) · <strong>Diminish</strong> (excuse/justification) · <strong>Rebuild</strong> (compensation/apology).</p></div></details>
+  <details><summary><span class="fc-q">Benoit's 5 Image-Repair categories <span class="badge">⭐</span></span></summary><div class="reveal"><p><strong>Denial · Evasion of responsibility · Reducing offensiveness · Corrective action · Mortification.</strong> (Hook: <em>D-E-R-C-M</em>.)</p></div></details>
+  <details><summary><span class="fc-q">What is "defeasibility"?</span></summary><div class="reveal"><p>An evasion-of-responsibility strategy: pleading <strong>lack of information or control</strong> — superior forces against which nothing could be done.</p></div></details>
+  <details><summary><span class="fc-q">EPPM in one sentence <span class="badge">⭐</span></span></summary><div class="reveal"><p>(Witte) Fear works only if <strong>high threat is paired with high efficacy</strong>; otherwise people enter <strong>fear control</strong>, not danger control.</p></div></details>
+  <details><summary><span class="fc-q">EPPM's 4 perceptions</span></summary><div class="reveal"><p>Perceived <strong>susceptibility</strong> · <strong>severity</strong> · <strong>response efficacy</strong> · <strong>self-efficacy</strong>.</p></div></details>
+  <details><summary><span class="fc-q">Two non-negotiable crisis-plan rules <span class="badge">⭐</span></span></summary><div class="reveal"><p>"<strong>No comment</strong>" is never acceptable; only <strong>one designated spokesperson</strong> (with one lead coordinating) talks to media.</p></div></details>
+  <details><summary><span class="fc-q">The 4 credibility dimensions</span></summary><div class="reveal"><p><strong>Openness/honesty · competence · fairness · empathy.</strong></p></div></details>
+  <details><summary><span class="fc-q">The terror first-message template <span class="badge">⭐</span></span></summary><div class="reveal"><p>Sympathy → info + measures → appreciation → unity/triumph → invoke values (democracy, liberty, human rights). Hook: <em>S-I-A-U-V</em>.</p></div></details>
+  <details><summary><span class="fc-q">Episodic vs thematic framing (Iyengar)</span></summary><div class="reveal"><p><strong>Episodic</strong> = individual events → individual blame. <strong>Thematic</strong> = context/trends → systemic blame.</p></div></details>
+  <details><summary><span class="fc-q">Apologia's 4 strategies</span></summary><div class="reveal"><p><strong>Denial · Bolstering · Differentiation · Transcendence.</strong></p></div></details>
+  <details><summary><span class="fc-q">The 2 components of an "attack" (IRT)</span></summary><div class="reveal"><p>An <strong>offensive act</strong> + an <strong>accusation of responsibility</strong>. (Remove either → no threat.)</p></div></details>
+  <details><summary><span class="fc-q">Who said "people respond to the hazards they perceive"?</span></summary><div class="reveal"><p><strong>Slovic</strong>, Fischhoff &amp; Lichtenstein (1979) — risk perception ≠ statistical likelihood.</p></div></details>
+</section>
+
+<!-- 12 Practice exam -->
+<section id="exam">
+  <h2 class="sec"><span class="e" aria-hidden="true">📝</span>12. Practice exam</h2>
+  <p>Answer in your head (or on paper) first, then tap to check.</p>
+
+  <h3>Section A — short answer</h3>
+  <details><summary>A1. Define a crisis (cite one author).</summary><div class="reveal"><p>Coombs (2007): the <strong>perception</strong> of an unpredictable event that threatens stakeholders' important <strong>expectancies</strong> and can seriously impact performance.</p></div></details>
+  <details><summary>A2. Name Benoit's five categories.</summary><div class="reveal"><p>Denial · Evasion of responsibility · Reducing offensiveness · Corrective action · Mortification.</p></div></details>
+  <details><summary>A3. What does EPPM say about fear appeals?</summary><div class="reveal"><p>Threat (susceptibility + severity) must be paired with efficacy (response + self). No efficacy → fear control (denial/avoidance) instead of danger control.</p></div></details>
+  <details><summary>A4. Two rules from the crisis-plan policy.</summary><div class="reveal"><p>"No comment" is never acceptable; only one designated spokesperson (with one lead) communicates with media.</p></div></details>
+
+  <h3>Section B — essay (outline)</h3>
+  <details><summary>B1. Explain SCCT and how a manager picks a response.</summary><div class="reveal"><p>Define SCCT (Coombs) + Attribution Theory → assess threat (type, severity, history, reputation) → classify type → choose posture (deny/diminish for low blame; rebuild for high blame or intensifying factors) → <strong>maintain consistency</strong>. Illustrate with BP (high blame, but denied → reputational collapse).</p></div></details>
+  <details><summary>B2. Compare Apologia and Image Repair Theory.</summary><div class="reveal"><p>Apologia = self-defence rhetoric (denial, bolstering, differentiation, transcendence) → corporate apologia (conciliation/redefinition/dissociation). Benoit's IRT systematised &amp; expanded it into 5 categories, adding corrective action + mortification and foregrounding the audience. Both are <strong>descriptive, not evaluative</strong>; IRT can be misused to dodge accountability. Illustrate with Carrefour + Colectiv.</p></div></details>
+  <details><summary>B3. What should a first message after a terror attack contain?</summary><div class="reveal"><p>3 audiences (media/public/internal). 5 elements: sympathy → info + measures → appreciation → unity/triumph → invoke values. Vary with Brussels/Nice/London/Barcelona (emotion, call-to-action, national history).</p></div></details>
+
+  <h3>Section C — case analysis</h3>
+  <details><summary>C1. Analyse BP / Deepwater Horizon with SCCT.</summary><div class="reveal"><p>Type = preventable/accident, high responsibility, high severity. BP began with deny + shift-blame + minimisation (wrong posture); arrogant spokesperson (Hayward); no plan; limited media. Later rebuild ($20bn, "make it right"). Verdict: mismatch + broken consistency → ~25% value lost. Fix: lead with rebuild + empathetic single voice.</p></div></details>
+  <details><summary>C2. Transfer task — a hospital gives ~40 patients expired vaccines; a nurse alleges management knew. You're the comms lead. Your plan?</summary><div class="reveal">
+    <ul>
+      <li><strong>Classify:</strong> genuine error = accidental (low blame); but "management knew" pushes it toward preventable (high blame) + a reputational intensifier. State both.</li>
+      <li><strong>SCCT:</strong> lead with instructing/adjusting info (never "no comment"); given health severity → rebuild: corrective action (recall, retest, audit) + care/compensation + mortification/apology if responsibility is confirmed.</li>
+      <li><strong>First-message:</strong> sympathy → facts + free retesting + hotline → appreciation for responders → commitment to investigate.</li>
+      <li><strong>EPPM:</strong> pair the threat with a clear doable action (come in for a check) → danger control, not panic.</li>
+      <li><strong>Spokesperson/consistency:</strong> one medical spokesperson, one lead, aligned with health ministry &amp; local authorities (avoid the Colectiv "clashing voices" trap).</li>
+      <li><strong>Handle the allegation transparently</strong> — don't attack the nurse (it would wreck honesty/fairness). <strong>Evaluate</strong> as it unfolds.</li>
+    </ul>
+  </div></details>
+
+  <div class="call key"><span class="lab"><span aria-hidden="true">✅</span> Self-check rubric</span>
+    <p>Did you <strong>name the theorist</strong>? <strong>classify the crisis type</strong> + intensifying factors? name <strong>specific sub-strategies with examples</strong>? check <strong>empathy · measures · consistency · spokesperson · audience action</strong>? and <strong>evaluate</strong> (what worked, what you'd change)?</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>📚 Built from the 9 course lectures (Pop-Flanja, Crisis Communication, Babeș-Bolyai). Study aid — always defer to your lecture slides and the professor's framing.</p>
+  <p>You've got this. 💪 Good luck on the exam.</p>
+</footer>
+</div>
+
+<button id="top" aria-label="Back to top" title="Back to top">↑</button>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Theme toggle (remembers choice) */
+  var body=document.body, btn=document.getElementById("themeBtn"), txt=document.getElementById("themeTxt");
+  function sysDark(){return window.matchMedia("(prefers-color-scheme: dark)").matches;}
+  function apply(t){
+    body.setAttribute("data-theme",t);
+    var dark = t==="dark";
+    btn.setAttribute("aria-pressed", String(dark));
+    btn.firstChild.nodeValue = dark ? "☀️ " : "🌙 ";
+    txt.textContent = dark ? "Light" : "Dark";
+  }
+  var saved=null; try{saved=localStorage.getItem("ccTheme");}catch(e){}
+  apply(saved || (sysDark()?"dark":"light"));
+  btn.addEventListener("click",function(){
+    var next = body.getAttribute("data-theme")==="dark" ? "light":"dark";
+    apply(next); try{localStorage.setItem("ccTheme",next);}catch(e){}
+  });
+
+  /* Reading progress bar + back-to-top */
+  var bar=document.getElementById("bar"), top=document.getElementById("top");
+  function onScroll(){
+    var h=document.documentElement, max=h.scrollHeight-h.clientHeight;
+    var p = max>0 ? (h.scrollTop/max)*100 : 0;
+    bar.style.width=p+"%";
+    top.classList.toggle("show", h.scrollTop>600);
+  }
+  document.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+  top.addEventListener("click",function(){window.scrollTo({top:0,behavior:reduce?"auto":"smooth"});});
+})();
+</script>
+</body>
+</html>
