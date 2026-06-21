@@ -74,6 +74,9 @@
   blockquote{margin:.8rem 0;padding:.5rem 0 .5rem 1rem;border-left:4px solid color-mix(in srgb,var(--brand) 50%,var(--line));color:var(--ink);font-style:italic}
   blockquote cite{display:block;font-style:normal;color:var(--muted);font-size:.9rem;margin-top:.3rem}
 
+  .eg{display:block;color:var(--ex);font-style:italic;font-size:.93em;line-height:1.45;margin-top:.18rem}
+  .eg::before{content:"\21B3 e.g. ";font-style:normal;font-weight:800;opacity:.85}
+  td .eg{margin-top:0}
   .call{border:1px solid var(--line);border-left-width:5px;border-radius:12px;padding:.85rem 1rem;margin:1rem 0;background:var(--card)}
   .call .lab{display:inline-flex;align-items:center;gap:.4rem;font-weight:800;font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
   .call p:first-of-type{margin-top:.35rem} .call p:last-child{margin-bottom:0} .call ul{margin:.4rem 0 0}
@@ -186,30 +189,30 @@
 
   <h4>Step 1 — Assess the reputational threat (4 factors)</h4>
   <ol>
-    <li><strong>Crisis type</strong> — sets the baseline responsibility (below).</li>
-    <li><strong>Severity</strong> — how much damage/harm was done.</li>
-    <li><strong>History</strong> — has the organisation had similar crises before?</li>
-    <li><strong>Prior reputation / relationship</strong> — was the existing relationship with stakeholders good or bad?</li>
+    <li><strong>Crisis type</strong> — sets the baseline responsibility (below). <span class="eg">a tampering scare (you're a victim) vs a bribery scandal (you're to blame).</span></li>
+    <li><strong>Severity</strong> — how much damage/harm was done. <span class="eg">a two-hour website outage vs an explosion that kills workers.</span></li>
+    <li><strong>History</strong> — has the organisation had similar crises before? <span class="eg">an airline's third crash this year is judged far harder than its first.</span></li>
+    <li><strong>Prior reputation / relationship</strong> — was the existing relationship with stakeholders good or bad? <span class="eg">a long-trusted charity is forgiven faster than a firm people already distrust.</span></li>
   </ol>
   <p>The last two double as the <strong>two intensifying factors</strong>: a <strong>history of crises</strong> and a <strong>prior negative reputation</strong> both <em>raise</em> attributed responsibility. The same event lands harder on an organisation with baggage.</p>
 
   <h4>Step 2 — The three crisis types (rising blame)</h4>
   <div class="tablewrap"><table>
-    <thead><tr><th>Cluster</th><th>Responsibility</th><th>Examples</th></tr></thead>
+    <thead><tr><th>Cluster</th><th>Blame</th><th>👉 Remember it with…</th></tr></thead>
     <tbody>
-      <tr><td><strong>Victim</strong></td><td>Minimal</td><td>natural disaster, rumour, product tampering, workplace violence, malevolence</td></tr>
-      <tr><td><strong>Accidental</strong></td><td>Low</td><td>technical-error accidents, challenges</td></tr>
-      <tr><td><strong>Preventable</strong></td><td>Strong</td><td>human-error accidents, organisational misdeeds, management misconduct</td></tr>
+      <tr><td><strong>Victim</strong></td><td>Minimal</td><td>A hacker leaks your customer database — you were <em>attacked</em> too. <span class="eg">also: natural disaster, rumour, product tampering.</span></td></tr>
+      <tr><td><strong>Accidental</strong></td><td>Low</td><td>A faulty part from a supplier forces a recall — <em>no intent</em>. <span class="eg">also: a technical-error accident.</span></td></tr>
+      <tr><td><strong>Preventable</strong></td><td>Strong</td><td>You <em>ignored repeated safety warnings</em> and a worker is injured. <span class="eg">also: misconduct, a cover-up, management misdeeds.</span></td></tr>
     </tbody>
   </table></div>
 
   <h4>Step 3 — The response strategies</h4>
   <p>Coombs groups responses into three rising postures, plus a secondary support set:</p>
   <ul>
-    <li><strong>DENY</strong> — <em>attack the accuser</em> (confront whoever claims a crisis exists), <em>denial</em> (assert there is no crisis), <em>scapegoat</em> (blame someone outside the organisation).</li>
-    <li><strong>DIMINISH</strong> — <em>excuse</em> (deny intent to do harm / minimise responsibility), <em>justification</em> (minimise the perceived damage).</li>
-    <li><strong>REBUILD</strong> — <em>compensation</em> (money or gifts to victims), <em>apology</em> (take full responsibility and ask forgiveness).</li>
-    <li><strong>BOLSTERING</strong> (secondary, supports the others) — <em>reminder</em> (recall past good works), <em>ingratiation</em> (praise stakeholders), <em>victimage</em> (note the organisation is a victim too).</li>
+    <li><strong>DENY</strong> — <em>attack the accuser</em> ("that report is biased"), <em>denial</em> ("there is no crisis"), <em>scapegoat</em> ("our subcontractor caused this, not us").</li>
+    <li><strong>DIMINISH</strong> — <em>excuse</em> ("we never intended any harm"), <em>justification</em> ("the spill is tiny next to the whole ocean" — yes, BP said this).</li>
+    <li><strong>REBUILD</strong> — <em>compensation</em> ("we'll set up a $20bn fund for victims" — BP again), <em>apology</em> ("we take full responsibility and we are sorry").</li>
+    <li><strong>BOLSTERING</strong> (secondary, supports the others) — <em>reminder</em> ("30 years of a spotless safety record"), <em>ingratiation</em> ("thank you to our loyal customers"), <em>victimage</em> ("we were deceived by our supplier too").</li>
   </ul>
   <p>Underpinning all of this is <strong>"informing and adjusting information"</strong>: in every crisis you first give people the facts and tell them how to cope. For low-responsibility victim crises with no history, that base level plus deny/diminish can be enough.</p>
 
@@ -250,26 +253,26 @@
   <h4>Apologia</h4>
   <p><strong>Apologia</strong> is the rhetoric of <strong>self-defence</strong> (Greek <em>apologia</em>; crucially, it does <strong>not</strong> mean "apology"). It originates in <em>political</em> communication as four strategies for someone under attack for wrongdoing:</p>
   <ol>
-    <li><strong>Denial</strong> — claim no involvement.</li>
-    <li><strong>Bolstering</strong> — divert attention to the accused's good deeds.</li>
-    <li><strong>Differentiation</strong> — remove the act from its negative context (re-describe it, compare it to something worse).</li>
-    <li><strong>Transcendence</strong> — place the act in a broader, more favourable context.</li>
+    <li><strong>Denial</strong> — claim no involvement. <span class="eg">"I had nothing to do with it."</span></li>
+    <li><strong>Bolstering</strong> — divert attention to the accused's good deeds. <span class="eg">"look at everything good I've done for this community."</span></li>
+    <li><strong>Differentiation</strong> — remove the act from its negative context (re-describe it, compare it to something worse). <span class="eg">"this wasn't a bribe, it was a normal diplomatic gift."</span></li>
+    <li><strong>Transcendence</strong> — place the act in a broader, more favourable context. <span class="eg">"judge this within the bigger picture of international cooperation."</span></li>
   </ol>
   <h4>Corporate apologia</h4>
   <p>Applied to organisations, apologia offers three routes: <strong>conciliation</strong> (acknowledge guilt, apologise, add compensation/corrective action); <strong>redefinition</strong> (diffuse the public's perception of guilt); and <strong>dissociation</strong> (separate the organisation from the crisis).</p>
   <ul>
-    <li><strong>Redefinition</strong> sub-strategies: <em>provocation</em> (we reacted to hostilities), <em>defeasibility</em> (superior forces; nothing could be done), <em>good intentions</em> (acted in good faith, unexpected results), <em>minimisation</em> (the problem is small).</li>
-    <li><strong>Dissociation</strong> forms: <em>opinion–knowledge</em> ("people think we're linked, but facts say otherwise"), <em>individual–group</em> ("one person/unit is responsible, not the whole organisation"), <em>accident–essence</em> ("it happened and we're responsible, but it's an isolated incident that doesn't represent us").</li>
+    <li><strong>Redefinition</strong> sub-strategies: <em>provocation</em> ("we only reacted to their attack first"), <em>defeasibility</em> ("a power failure we couldn't control caused it"), <em>good intentions</em> ("we acted in good faith; the outcome surprised us"), <em>minimisation</em> ("the problem is far smaller than reported").</li>
+    <li><strong>Dissociation</strong> forms: <em>opinion–knowledge</em> ("people assume we're linked, but the facts say no"), <em>individual–group</em> ("one rogue employee did this, not the company"), <em>accident–essence</em> ("a one-off incident that simply isn't who we are").</li>
   </ul>
   <h4>Image Repair Theory (Benoit, 1995)</h4>
   <p>Benoit <strong>systematised and expanded</strong> apologia into the most widely used image-defence framework. Two foundations: an <strong>attack has two parts</strong> — an <em>offensive act</em> + an <em>accusation of responsibility</em> (remove either and there's no threat); and you must first answer two questions — <strong>What is the accusation? Who is the key audience?</strong> (audiences ultimately validate or reject what you project). The five categories:</p>
   <div class="card">
     <ol>
-      <li><strong>Denial</strong> — simple denial · shifting the blame.</li>
-      <li><strong>Evasion of responsibility</strong> — provocation · <strong>defeasibility</strong> (lack of information/control) · accident · good intentions.</li>
-      <li><strong>Reducing offensiveness</strong> — bolstering · minimisation · differentiation · transcendence · attacking the accuser · compensation.</li>
-      <li><strong>Corrective action</strong> — fix the problem and/or prevent recurrence.</li>
-      <li><strong>Mortification</strong> — admit responsibility and apologise.</li>
+      <li><strong>Denial</strong> — simple denial · shifting the blame. <span class="eg">"we didn't do it" / "our supplier did."</span></li>
+      <li><strong>Evasion of responsibility</strong> — provocation · <strong>defeasibility</strong> (lack of information/control) · accident · good intentions. <span class="eg">"the equipment failed on us — it was beyond our control."</span></li>
+      <li><strong>Reducing offensiveness</strong> — bolstering · minimisation · differentiation · transcendence · attacking the accuser · compensation. <span class="eg">"only a few were affected, and we've been trusted for decades."</span></li>
+      <li><strong>Corrective action</strong> — fix the problem and/or prevent recurrence. <span class="eg">"we've recalled the batch and added daily safety checks."</span></li>
+      <li><strong>Mortification</strong> — admit responsibility and apologise. <span class="eg">"we are sorry; this is our fault and we own it."</span></li>
     </ol>
   </div>
   <div class="call warn"><span class="lab"><span aria-hidden="true">⚠️</span> Strengths &amp; the honest limitation</span>
@@ -382,12 +385,13 @@
   <p><strong>Furedi — the "culture of fear" / "risk society":</strong> the media over-expose the <em>worst-case</em> and exaggerate the scale of threats; trust in experts and authorities declines; suspicion of hidden interests rises. This primes the public for fear.</p>
   <h4>Three research directions</h4>
   <ol>
-    <li><strong>Psychometric (Slovic):</strong> perceived risk rises with two factor-families — <strong>Dread</strong> (uncontrollable, catastrophic, fatal, inequitable, involuntary, not-easily-reduced, increasing) and the <strong>Unknown</strong> (not observable, effects delayed, new, unknown to science). High dread + high unknown = high perceived risk, regardless of statistics.</li>
+    <li><strong>Psychometric (Slovic):</strong> perceived risk rises with two factor-families — <strong>Dread</strong> (uncontrollable, catastrophic, fatal, inequitable, involuntary, not-easily-reduced, increasing) and the <strong>Unknown</strong> (not observable, effects delayed, new, unknown to science). High dread + high unknown = high perceived risk, regardless of statistics. <span class="eg">a nuclear meltdown scores high on dread (uncontrollable, catastrophic); a brand-new chemical with invisible, delayed effects scores high on unknown — both feel scarier than a car, which kills more people.</span></li>
     <li><strong>Cultural Theory of Risk (Douglas):</strong> risk attitudes compared on two dimensions — <strong>grid</strong> (the roles, control and stratification people accept) and <strong>group</strong> (the strength of bonds between them). The word "risk" is preferred to "danger" in political discourse because it carries the <em>aura of science</em> and "looks forward".</li>
     <li><strong>Social Amplification of Risk:</strong> information processes, institutions and social groups <strong>amplify or attenuate</strong> risk signals as they pass through society (filter/decode → process → attach values → validate with peers → form intentions → act).</li>
   </ol>
   <div class="call key"><span class="lab"><span aria-hidden="true">🧪</span> EPPM — Extended Parallel Process Model (Kim Witte)</span>
     <p>A model for <strong>effective public-health / crisis messages</strong>. A message works when people follow the recommended action — <strong>danger control</strong>. Two pairs of perceptions decide this: the <strong>threat</strong> — perceived <strong>susceptibility</strong> ("could this affect me?") and perceived <strong>severity</strong> ("how bad is it?"); and the <strong>efficacy</strong> — <strong>response/plan efficacy</strong> ("does the recommended action work?") and <strong>self-efficacy</strong> ("can I do it?"). The rule: <mark>high threat must be paired with high efficacy</mark>. Threat with <em>no</em> workable action pushes people into <strong>fear control</strong> — denial, avoidance, switching off.</p>
+    <p style="margin-bottom:0"><span class="eg">in one message: "this virus can infect anyone (susceptibility) and can be serious (severity) — but a mask and 20 seconds of handwashing genuinely cut your risk (response efficacy) and are easy to do today (self-efficacy)."</span></p>
   </div>
 
   <h3 class="block c"><span aria-hidden="true">📂</span> Case study: COVID-19 (UK, France, Romania)</h3>
@@ -421,7 +425,7 @@
   <h4>Public-sector specifics</h4>
   <p>Public institutions face two facets — the crisis itself <em>and</em> its perception — and the course's lesson is that they must take <strong>social-media interaction</strong> seriously (not just one-way posting), be open to consulting <strong>communication experts</strong> from the private sector, and remember that <strong>political dimensions</strong> shape the response. Crucially, the rule of <strong>one consistent voice</strong> applies just as much here as in companies.</p>
   <h4>Framing — episodic vs thematic (Shanto Iyengar)</h4>
-  <p>How the <strong>media frame</strong> a crisis decides whom the public blames. <strong>Episodic framing</strong> tells the story through specific events and individuals → audiences assign <strong>individual</strong> responsibility (and feel emotion). <strong>Thematic framing</strong> sets the story in context, trends and systems → audiences assign <strong>societal/systemic</strong> responsibility. The frame is therefore a political force: it can keep blame on one person, or escalate it to "the system".</p>
+  <p>How the <strong>media frame</strong> a crisis decides whom the public blames. <strong>Episodic framing</strong> tells the story through specific events and individuals → audiences assign <strong>individual</strong> responsibility (and feel emotion). <span class="eg">a news report following one grieving family → blame "the negligent club owner."</span> <strong>Thematic framing</strong> sets the story in context, trends and systems → audiences assign <strong>societal/systemic</strong> responsibility. <span class="eg">a report on years of bribed safety inspections → blame "systemic corruption" ("Corruption Kills").</span> The frame is therefore a political force: it can keep blame on one person, or escalate it to "the system".</p>
 
   <h3 class="block c"><span aria-hidden="true">📂</span> Case study: the Colectiv club fire (2015)</h3>
   <p><strong>What happened.</strong> On 30 October 2015, indoor pyrotechnics at the <strong>Colectiv</strong> club in Bucharest set the foam ceiling alight; the toll rose from <strong>27 to 65</strong> as burn victims died over weeks — many because Romania's burn-care capacity was overwhelmed and patients had to be transferred abroad. Public fury at corruption and lax safety enforcement produced <strong>mass protests</strong>, and within days the Prime Minister (Ponta), his government and the local mayor (Piedone) <strong>resigned</strong>. (This is the professor's own published research — know it in detail.)</p>
@@ -454,10 +458,10 @@
   <h3 class="block t"><span aria-hidden="true">📘</span> The theory</h3>
   <p>This chapter pushes Image Repair Theory to its most sophisticated use and answers Benoit's second question — <strong>who is the audience?</strong> — in the strongest way. The strategies are the familiar IRT menu (denial, justification, transcendence, dissociation, victimage, equivocation), but the lesson is about <strong>tailoring</strong> and <strong>reframing</strong>:</p>
   <ul>
-    <li><strong>Audience-centred strategy.</strong> The <em>same</em> accusation can be answered with a different mix for different publics — what persuades one audience may alienate another.</li>
-    <li><strong>Reframing.</strong> When the media have already written your story ("the glamorous corrupt politician"), image repair means offering an <strong>alternative frame</strong> the audience can adopt.</li>
-    <li><strong>Layered, timed communication.</strong> A coordinated sequence of messages across channels, languages and moments — controlling not just <em>what</em> is said but <em>when</em> and <em>to whom</em>.</li>
-    <li><strong>Equivocation</strong> — answering incompletely on the most dangerous points (e.g. others' involvement) while appearing responsive.</li>
+    <li><strong>Audience-centred strategy.</strong> The <em>same</em> accusation can be answered with a different mix for different publics — what persuades one audience may alienate another. <span class="eg">"injustice" for a legal-minded French reader, "spying conspiracy" for a political Spanish one.</span></li>
+    <li><strong>Reframing.</strong> When the media have already written your story ("the glamorous corrupt politician"), image repair means offering an <strong>alternative frame</strong> the audience can adopt. <span class="eg">recast "bribes" as "diplomatic gifts of equal value."</span></li>
+    <li><strong>Layered, timed communication.</strong> A coordinated sequence of messages across channels, languages and moments — controlling not just <em>what</em> is said but <em>when</em> and <em>to whom</em>. <span class="eg">three interviews, three countries, three languages, within days.</span></li>
+    <li><strong>Equivocation</strong> — answering incompletely on the most dangerous points (e.g. others' involvement) while appearing responsive. <span class="eg">"the names are in the records" instead of naming anyone.</span></li>
   </ul>
 
   <h3 class="block c"><span aria-hidden="true">📂</span> Case study: Eva Kaili's three interviews (2023)</h3>
